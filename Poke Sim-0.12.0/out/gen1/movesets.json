@@ -1,0 +1,894 @@
+{
+"bulbasaur": [
+"RAZOR_LEAF",
+"TACKLE",
+"SLEEP_POWDER",
+"GROWL"
+],
+"ivysaur": [
+"RAZOR_LEAF",
+"GROWL",
+"SLEEP_POWDER",
+"VINE_WHIP"
+],
+"venusaur": [
+"RAZOR_LEAF",
+"VINE_WHIP",
+"SLEEP_POWDER",
+"GROWL"
+],
+"charmander": [
+"FLAMETHROWER",
+"SLASH",
+"EMBER",
+"SCRATCH"
+],
+"charmeleon": [
+"FLAMETHROWER",
+"SLASH",
+"EMBER",
+"SCRATCH"
+],
+"charizard": [
+"FLAMETHROWER",
+"SLASH",
+"EMBER",
+"SCRATCH"
+],
+"squirtle": [
+"HYDRO_PUMP",
+"BITE",
+"WATER_GUN",
+"SKULL_BASH"
+],
+"wartortle": [
+"HYDRO_PUMP",
+"BITE",
+"WATER_GUN",
+"SKULL_BASH"
+],
+"blastoise": [
+"HYDRO_PUMP",
+"BITE",
+"WATER_GUN",
+"SKULL_BASH"
+],
+"caterpie": [
+"TACKLE",
+"STRING_SHOT"
+],
+"metapod": [
+"TACKLE",
+"HARDEN",
+"STRING_SHOT"
+],
+"butterfree": [
+"PSYBEAM",
+"GUST",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"weedle": [
+"POISON_STING",
+"STRING_SHOT"
+],
+"kakuna": [
+"POISON_STING",
+"HARDEN",
+"STRING_SHOT"
+],
+"beedrill": [
+"TWINEEDLE",
+"POISON_STING",
+"PIN_MISSILE",
+"FURY_ATTACK"
+],
+"pidgey": [
+"MIRROR_MOVE",
+"WING_ATTACK",
+"QUICK_ATTACK",
+"SAND_ATTACK"
+],
+"pidgeotto": [
+"MIRROR_MOVE",
+"WING_ATTACK",
+"QUICK_ATTACK",
+"SAND_ATTACK"
+],
+"pidgeot": [
+"SAND_ATTACK",
+"WING_ATTACK",
+"QUICK_ATTACK",
+"MIRROR_MOVE"
+],
+"rattata": [
+"HYPER_FANG",
+"SUPER_FANG",
+"QUICK_ATTACK",
+"TACKLE"
+],
+"raticate": [
+"HYPER_FANG",
+"SUPER_FANG",
+"QUICK_ATTACK",
+"TACKLE"
+],
+"spearow": [
+"DRILL_PECK",
+"MIRROR_MOVE",
+"PECK",
+"AGILITY"
+],
+"fearow": [
+"DRILL_PECK",
+"FURY_ATTACK",
+"PECK",
+"AGILITY"
+],
+"ekans": [
+"ACID",
+"BITE",
+"GLARE",
+"SCREECH"
+],
+"arbok": [
+"ACID",
+"BITE",
+"GLARE",
+"POISON_STING"
+],
+"pikachu": [
+"THUNDERBOLT",
+"DOUBLE_TEAM",
+"THUNDER_WAVE",
+"THUNDER"
+],
+"raichu": [
+"THUNDERBOLT",
+"SWIFT",
+"DOUBLE_TEAM",
+"THUNDER"
+],
+"sandshrew": [
+"SLASH",
+"POISON_STING",
+"SWIFT",
+"FURY_SWIPES"
+],
+"sandslash": [
+"SLASH",
+"POISON_STING",
+"SWIFT",
+"FURY_SWIPES"
+],
+"nidoranf": [
+"BITE",
+"DOUBLE_KICK",
+"FURY_SWIPES",
+"SCRATCH"
+],
+"nidorina": [
+"BITE",
+"DOUBLE_KICK",
+"FURY_SWIPES",
+"SCRATCH"
+],
+"nidoqueen": [
+"BODY_SLAM",
+"DOUBLE_KICK",
+"BITE",
+"FURY_SWIPES"
+],
+"nidoranm": [
+"HORN_ATTACK",
+"DOUBLE_KICK",
+"HORN_DRILL",
+"TACKLE"
+],
+"nidorino": [
+"HORN_ATTACK",
+"DOUBLE_KICK",
+"HORN_DRILL",
+"TACKLE"
+],
+"nidoking": [
+"THRASH",
+"DOUBLE_KICK",
+"HORN_DRILL",
+"FURY_ATTACK"
+],
+"clefairy": [
+"METRONOME",
+"SING",
+"DOUBLESLAP",
+"DEFENSE_CURL"
+],
+"clefable": [
+"POUND",
+"SING",
+"DOUBLESLAP",
+"DEFENSE_CURL"
+],
+"vulpix": [
+"FLAMETHROWER",
+"QUICK_ATTACK",
+"EMBER",
+"CONFUSE_RAY"
+],
+"ninetales": [
+"FLAMETHROWER",
+"QUICK_ATTACK",
+"EMBER",
+"CONFUSE_RAY"
+],
+"jigglypuff": [
+"DOUBLESLAP",
+"SING",
+"REST",
+"BODY_SLAM"
+],
+"wigglytuff": [
+"DEFENSE_CURL",
+"SING",
+"REST",
+"BODY_SLAM"
+],
+"zubat": [
+"BITE",
+"HAZE",
+"LEECH_LIFE",
+"CONFUSE_RAY"
+],
+"golbat": [
+"BITE",
+"WING_ATTACK",
+"LEECH_LIFE",
+"CONFUSE_RAY"
+],
+"oddish": [
+"PETAL_DANCE",
+"ACID",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"gloom": [
+"PETAL_DANCE",
+"ACID",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"vileplume": [
+"PETAL_DANCE",
+"ACID",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"paras": [
+"SLASH",
+"LEECH_LIFE",
+"SPORE",
+"STUN_SPORE"
+],
+"parasect": [
+"SLASH",
+"LEECH_LIFE",
+"SPORE",
+"STUN_SPORE"
+],
+"venonat": [
+"PSYCHIC_M",
+"LEECH_LIFE",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"venomoth": [
+"PSYCHIC_M",
+"LEECH_LIFE",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"diglett": [
+"EARTHQUAKE",
+"SLASH",
+"DIG",
+"SCRATCH"
+],
+"dugtrio": [
+"EARTHQUAKE",
+"SLASH",
+"DIG",
+"SCRATCH"
+],
+"meowth": [
+"SLASH",
+"BITE",
+"FURY_SWIPES",
+"PAY_DAY"
+],
+"persian": [
+"SLASH",
+"BITE",
+"FURY_SWIPES",
+"PAY_DAY"
+],
+"psyduck": [
+"HYDRO_PUMP",
+"CONFUSION",
+"FURY_SWIPES",
+"SCRATCH"
+],
+"golduck": [
+"HYDRO_PUMP",
+"CONFUSION",
+"FURY_SWIPES",
+"SCRATCH"
+],
+"mankey": [
+"THRASH",
+"SEISMIC_TOSS",
+"SCREECH",
+"LOW_KICK"
+],
+"primeape": [
+"THRASH",
+"FOCUS_ENERGY",
+"KARATE_CHOP",
+"LOW_KICK"
+],
+"growlithe": [
+"FLAMETHROWER",
+"TAKE_DOWN",
+"BITE",
+"EMBER"
+],
+"arcanine": [
+"FLAMETHROWER",
+"TAKE_DOWN",
+"BITE",
+"EMBER"
+],
+"poliwag": [
+"HYDRO_PUMP",
+"BODY_SLAM",
+"HYPNOSIS",
+"WATER_GUN"
+],
+"poliwhirl": [
+"HYDRO_PUMP",
+"BODY_SLAM",
+"HYPNOSIS",
+"WATER_GUN"
+],
+"poliwrath": [
+"HYDRO_PUMP",
+"BODY_SLAM",
+"HYPNOSIS",
+"AMNESIA"
+],
+"abra": [
+"TELEPORT"
+],
+"kadabra": [
+"PSYCHIC_M",
+"RECOVER",
+"REFLECT",
+"PSYBEAM"
+],
+"alakazam": [
+"PSYCHIC_M",
+"RECOVER",
+"REFLECT",
+"PSYBEAM"
+],
+"machop": [
+"SUBMISSION",
+"KARATE_CHOP",
+"SEISMIC_TOSS",
+"LOW_KICK"
+],
+"machoke": [
+"SUBMISSION",
+"KARATE_CHOP",
+"SEISMIC_TOSS",
+"LOW_KICK"
+],
+"machamp": [
+"SUBMISSION",
+"KARATE_CHOP",
+"FOCUS_ENERGY",
+"LOW_KICK"
+],
+"bellsprout": [
+"RAZOR_LEAF",
+"ACID",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"weepinbell": [
+"RAZOR_LEAF",
+"ACID",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"victreebel": [
+"RAZOR_LEAF",
+"GROWTH",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"tentacool": [
+"HYDRO_PUMP",
+"ACID",
+"WATER_GUN",
+"POISON_STING"
+],
+"tentacruel": [
+"HYDRO_PUMP",
+"ACID",
+"WATER_GUN",
+"POISON_STING"
+],
+"geodude": [
+"EARTHQUAKE",
+"ROCK_THROW",
+"TACKLE",
+"DEFENSE_CURL"
+],
+"graveler": [
+"EARTHQUAKE",
+"ROCK_THROW",
+"TACKLE",
+"DEFENSE_CURL"
+],
+"golem": [
+"EARTHQUAKE",
+"ROCK_THROW",
+"TACKLE",
+"DEFENSE_CURL"
+],
+"ponyta": [
+"GROWL",
+"EMBER",
+"STOMP",
+"AGILITY"
+],
+"rapidash": [
+"AGILITY",
+"EMBER",
+"STOMP",
+"GROWL"
+],
+"slowpoke": [
+"PSYCHIC_M",
+"WATER_GUN",
+"AMNESIA",
+"CONFUSION"
+],
+"slowbro": [
+"PSYCHIC_M",
+"WATER_GUN",
+"AMNESIA",
+"CONFUSION"
+],
+"magnemite": [
+"THUNDERSHOCK",
+"SWIFT",
+"THUNDER_WAVE",
+"SCREECH"
+],
+"magneton": [
+"THUNDERSHOCK",
+"SWIFT",
+"THUNDER_WAVE",
+"SONICBOOM"
+],
+"farfetchd": [
+"SLASH",
+"SAND_ATTACK",
+"FURY_ATTACK",
+"AGILITY"
+],
+"doduo": [
+"DRILL_PECK",
+"TRI_ATTACK",
+"FURY_ATTACK",
+"PECK"
+],
+"dodrio": [
+"DRILL_PECK",
+"TRI_ATTACK",
+"FURY_ATTACK",
+"PECK"
+],
+"seel": [
+"ICE_BEAM",
+"GROWL",
+"REST",
+"AURORA_BEAM"
+],
+"dewgong": [
+"ICE_BEAM",
+"HEADBUTT",
+"REST",
+"AURORA_BEAM"
+],
+"grimer": [
+"SLUDGE",
+"POUND",
+"ACID_ARMOR",
+"MINIMIZE"
+],
+"muk": [
+"SLUDGE",
+"MINIMIZE",
+"ACID_ARMOR",
+"DISABLE"
+],
+"shellder": [
+"ICE_BEAM",
+"CLAMP",
+"AURORA_BEAM",
+"TACKLE"
+],
+"cloyster": [
+"ICE_BEAM",
+"SUPERSONIC",
+"AURORA_BEAM",
+"SPIKE_CANNON"
+],
+"gastly": [
+"CONFUSE_RAY",
+"DREAM_EATER",
+"HYPNOSIS",
+"LICK"
+],
+"haunter": [
+"CONFUSE_RAY",
+"DREAM_EATER",
+"HYPNOSIS",
+"LICK"
+],
+"gengar": [
+"CONFUSE_RAY",
+"DREAM_EATER",
+"HYPNOSIS",
+"LICK"
+],
+"onix": [
+"SLAM",
+"ROCK_THROW",
+"TACKLE",
+"SCREECH"
+],
+"drowzee": [
+"PSYCHIC_M",
+"HEADBUTT",
+"HYPNOSIS",
+"CONFUSION"
+],
+"hypno": [
+"PSYCHIC_M",
+"HEADBUTT",
+"HYPNOSIS",
+"CONFUSION"
+],
+"krabby": [
+"STOMP",
+"CRABHAMMER",
+"VICEGRIP",
+"GUILLOTINE"
+],
+"kingler": [
+"STOMP",
+"CRABHAMMER",
+"VICEGRIP",
+"BUBBLE"
+],
+"voltorb": [
+"SWIFT",
+"SONICBOOM",
+"TACKLE",
+"SCREECH"
+],
+"electrode": [
+"SWIFT",
+"SONICBOOM",
+"SCREECH",
+"LIGHT_SCREEN"
+],
+"exeggcute": [
+"SOLARBEAM",
+"BARRAGE",
+"SLEEP_POWDER",
+"HYPNOSIS"
+],
+"exeggutor": [
+"LEECH_SEED",
+"STOMP",
+"SLEEP_POWDER",
+"HYPNOSIS"
+],
+"cubone": [
+"BONEMERANG",
+"THRASH",
+"BONE_CLUB",
+"HEADBUTT"
+],
+"marowak": [
+"BONEMERANG",
+"THRASH",
+"BONE_CLUB",
+"HEADBUTT"
+],
+"hitmonlee": [
+"HI_JUMP_KICK",
+"MEGA_KICK",
+"JUMP_KICK",
+"DOUBLE_KICK"
+],
+"hitmonchan": [
+"MEGA_PUNCH",
+"ICE_PUNCH",
+"COUNTER",
+"THUNDERPUNCH"
+],
+"lickitung": [
+"STOMP",
+"SLAM",
+"SUPERSONIC",
+"SCREECH"
+],
+"koffing": [
+"SLUDGE",
+"TACKLE",
+"SMOG",
+"SMOKESCREEN"
+],
+"weezing": [
+"SLUDGE",
+"TACKLE",
+"SMOG",
+"SMOKESCREEN"
+],
+"rhyhorn": [
+"HORN_DRILL",
+"HORN_ATTACK",
+"STOMP",
+"FURY_ATTACK"
+],
+"rhydon": [
+"HORN_DRILL",
+"HORN_ATTACK",
+"STOMP",
+"FURY_ATTACK"
+],
+"chansey": [
+"DOUBLE_EDGE",
+"SING",
+"POUND",
+"DOUBLESLAP"
+],
+"tangela": [
+"VINE_WHIP",
+"SLAM",
+"SLEEP_POWDER",
+"STUN_SPORE"
+],
+"kangaskhan": [
+"DIZZY_PUNCH",
+"MEGA_PUNCH",
+"BITE",
+"COMET_PUNCH"
+],
+"horsea": [
+"HYDRO_PUMP",
+"WATER_GUN",
+"BUBBLE",
+"AGILITY"
+],
+"seadra": [
+"HYDRO_PUMP",
+"WATER_GUN",
+"BUBBLE",
+"AGILITY"
+],
+"goldeen": [
+"WATERFALL",
+"HORN_DRILL",
+"AGILITY",
+"FURY_ATTACK"
+],
+"seaking": [
+"WATERFALL",
+"PECK",
+"HORN_ATTACK",
+"SUPERSONIC"
+],
+"staryu": [
+"HYDRO_PUMP",
+"MINIMIZE",
+"RECOVER",
+"WATER_GUN"
+],
+"starmie": [
+"HYDRO_PUMP",
+"SWIFT",
+"RECOVER",
+"MINIMIZE"
+],
+"mrmime": [
+"CONFUSION",
+"LIGHT_SCREEN",
+"SUBSTITUTE",
+"BARRIER"
+],
+"scyther": [
+"SLASH",
+"WING_ATTACK",
+"DOUBLE_TEAM",
+"QUICK_ATTACK"
+],
+"jynx": [
+"BLIZZARD",
+"BODY_SLAM",
+"LOVELY_KISS",
+"ICE_PUNCH"
+],
+"electabuzz": [
+"THUNDER",
+"QUICK_ATTACK",
+"THUNDERPUNCH",
+"THUNDERSHOCK"
+],
+"magmar": [
+"FLAMETHROWER",
+"CONFUSE_RAY",
+"FIRE_PUNCH",
+"EMBER"
+],
+"pinsir": [
+"SLASH",
+"FOCUS_ENERGY",
+"HARDEN",
+"VICEGRIP"
+],
+"tauros": [
+"LEER",
+"STOMP",
+"TACKLE",
+"RAGE"
+],
+"magikarp": [
+"TACKLE",
+"SPLASH"
+],
+"gyarados": [
+"HYDRO_PUMP",
+"SPLASH",
+"HYPER_BEAM",
+"BITE"
+],
+"lapras": [
+"HYDRO_PUMP",
+"ICE_BEAM",
+"SING",
+"BODY_SLAM"
+],
+"ditto": [
+"TRANSFORM"
+],
+"eevee": [
+"TAKE_DOWN",
+"BITE",
+"QUICK_ATTACK",
+"TACKLE"
+],
+"vaporeon": [
+"HYDRO_PUMP",
+"AURORA_BEAM",
+"QUICK_ATTACK",
+"TAKE_DOWN"
+],
+"jolteon": [
+"THUNDER",
+"PIN_MISSILE",
+"DOUBLE_KICK",
+"THUNDERSHOCK"
+],
+"flareon": [
+"FLAMETHROWER",
+"QUICK_ATTACK",
+"BITE",
+"EMBER"
+],
+"porygon": [
+"CONVERSION",
+"PSYBEAM",
+"RECOVER",
+"AGILITY"
+],
+"omanyte": [
+"HYDRO_PUMP",
+"HORN_ATTACK",
+"WATER_GUN",
+"SPIKE_CANNON"
+],
+"omastar": [
+"HYDRO_PUMP",
+"HORN_ATTACK",
+"WATER_GUN",
+"SPIKE_CANNON"
+],
+"kabuto": [
+"SLASH",
+"HYDRO_PUMP",
+"SCRATCH",
+"ABSORB"
+],
+"kabutops": [
+"SLASH",
+"HARDEN",
+"SCRATCH",
+"HYDRO_PUMP"
+],
+"aerodactyl": [
+"AGILITY",
+"WING_ATTACK",
+"HYPER_BEAM",
+"BITE"
+],
+"snorlax": [
+"HARDEN",
+"REST",
+"BODY_SLAM",
+"HYPER_BEAM"
+],
+"articuno": [
+"BLIZZARD",
+"PECK",
+"ICE_BEAM",
+"AGILITY"
+],
+"zapdos": [
+"THUNDER",
+"DRILL_PECK",
+"THUNDERSHOCK",
+"AGILITY"
+],
+"moltres": [
+"SKY_ATTACK",
+"FIRE_SPIN",
+"PECK",
+"AGILITY"
+],
+"dratini": [
+"HYPER_BEAM",
+"DRAGON_RAGE",
+"THUNDER_WAVE",
+"SLAM"
+],
+"dragonair": [
+"HYPER_BEAM",
+"DRAGON_RAGE",
+"THUNDER_WAVE",
+"SLAM"
+],
+"dragonite": [
+"HYPER_BEAM",
+"DRAGON_RAGE",
+"THUNDER_WAVE",
+"SLAM"
+],
+"mewtwo": [
+"PSYCHIC_M",
+"SWIFT",
+"RECOVER",
+"AMNESIA"
+],
+"mew": [
+"PSYCHIC_M",
+"MEGA_PUNCH",
+"POUND",
+"METRONOME"
+]
+}

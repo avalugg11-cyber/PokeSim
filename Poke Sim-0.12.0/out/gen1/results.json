@@ -1,0 +1,3784 @@
+{
+ "meta": {
+  "generation": 1,
+  "brain_version": "0.10.2",
+  "engine_version": "0.12.0",
+  "games_per_pair": 25,
+  "seed": 6514,
+  "rules": {
+   "both_faint_draw": true,
+   "badge_glitch": true,
+   "turn_limit": 50,
+   "statexp": 11000,
+   "battle_level": 50,
+   "learn_level_cap": null
+  },
+  "seconds": 17.5
+ },
+ "cards": [
+  {
+   "rank": 1,
+   "tier": "S",
+   "name": "MEWTWO",
+   "key": "mewtwo",
+   "moves": [
+    "PSYCHIC_M",
+    "SWIFT",
+    "RECOVER",
+    "AMNESIA"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 2082,
+   "wins": 3596,
+   "losses": 146,
+   "draws": 8,
+   "win_pct": 95.9,
+   "top10_win_pct": 76.0,
+   "level": 50
+  },
+  {
+   "rank": 2,
+   "tier": "A+",
+   "name": "ZAPDOS",
+   "key": "zapdos",
+   "moves": [
+    "THUNDER",
+    "DRILL_PECK",
+    "THUNDERSHOCK",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC",
+    "FLYING"
+   ],
+   "elo": 1875,
+   "wins": 3219,
+   "losses": 531,
+   "draws": 0,
+   "win_pct": 85.8,
+   "top10_win_pct": 48.4,
+   "level": 50
+  },
+  {
+   "rank": 3,
+   "tier": "A+",
+   "name": "MEW",
+   "key": "mew",
+   "moves": [
+    "PSYCHIC_M",
+    "MEGA_PUNCH",
+    "POUND",
+    "METRONOME"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1873,
+   "wins": 3213,
+   "losses": 536,
+   "draws": 1,
+   "win_pct": 85.7,
+   "top10_win_pct": 35.6,
+   "level": 50
+  },
+  {
+   "rank": 4,
+   "tier": "A",
+   "name": "ALAKAZAM",
+   "key": "alakazam",
+   "moves": [
+    "PSYCHIC_M",
+    "RECOVER",
+    "REFLECT",
+    "PSYBEAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1869,
+   "wins": 3201,
+   "losses": 544,
+   "draws": 5,
+   "win_pct": 85.4,
+   "top10_win_pct": 43.1,
+   "level": 50
+  },
+  {
+   "rank": 5,
+   "tier": "A",
+   "name": "JYNX",
+   "key": "jynx",
+   "moves": [
+    "BLIZZARD",
+    "BODY_SLAM",
+    "LOVELY_KISS",
+    "ICE_PUNCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ICE",
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1862,
+   "wins": 3183,
+   "losses": 565,
+   "draws": 2,
+   "win_pct": 84.9,
+   "top10_win_pct": 65.8,
+   "level": 50
+  },
+  {
+   "rank": 6,
+   "tier": "A",
+   "name": "GENGAR",
+   "key": "gengar",
+   "moves": [
+    "CONFUSE_RAY",
+    "DREAM_EATER",
+    "HYPNOSIS",
+    "LICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GHOST",
+    "POISON"
+   ],
+   "elo": 1861,
+   "wins": 3180,
+   "losses": 564,
+   "draws": 6,
+   "win_pct": 84.8,
+   "top10_win_pct": 50.2,
+   "level": 50
+  },
+  {
+   "rank": 7,
+   "tier": "A",
+   "name": "ARTICUNO",
+   "key": "articuno",
+   "moves": [
+    "BLIZZARD",
+    "PECK",
+    "ICE_BEAM",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ICE",
+    "FLYING"
+   ],
+   "elo": 1859,
+   "wins": 3176,
+   "losses": 574,
+   "draws": 0,
+   "win_pct": 84.7,
+   "top10_win_pct": 35.1,
+   "level": 50
+  },
+  {
+   "rank": 8,
+   "tier": "A",
+   "name": "HYPNO",
+   "key": "hypno",
+   "moves": [
+    "PSYCHIC_M",
+    "HEADBUTT",
+    "HYPNOSIS",
+    "CONFUSION"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1857,
+   "wins": 3171,
+   "losses": 579,
+   "draws": 0,
+   "win_pct": 84.6,
+   "top10_win_pct": 59.1,
+   "level": 50
+  },
+  {
+   "rank": 9,
+   "tier": "A",
+   "name": "LAPRAS",
+   "key": "lapras",
+   "moves": [
+    "HYDRO_PUMP",
+    "ICE_BEAM",
+    "SING",
+    "BODY_SLAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "ICE"
+   ],
+   "elo": 1829,
+   "wins": 3090,
+   "losses": 657,
+   "draws": 3,
+   "win_pct": 82.4,
+   "top10_win_pct": 40.9,
+   "level": 50
+  },
+  {
+   "rank": 10,
+   "tier": "A",
+   "name": "VENUSAUR",
+   "key": "venusaur",
+   "moves": [
+    "RAZOR_LEAF",
+    "VINE_WHIP",
+    "SLEEP_POWDER",
+    "GROWL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1821,
+   "wins": 3069,
+   "losses": 681,
+   "draws": 0,
+   "win_pct": 81.8,
+   "top10_win_pct": 44.9,
+   "level": 50
+  },
+  {
+   "rank": 11,
+   "tier": "A",
+   "name": "HAUNTER",
+   "key": "haunter",
+   "moves": [
+    "CONFUSE_RAY",
+    "DREAM_EATER",
+    "HYPNOSIS",
+    "LICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GHOST",
+    "POISON"
+   ],
+   "elo": 1818,
+   "wins": 3059,
+   "losses": 689,
+   "draws": 2,
+   "win_pct": 81.6,
+   "top10_win_pct": 43.6,
+   "level": 50
+  },
+  {
+   "rank": 12,
+   "tier": "A",
+   "name": "STARMIE",
+   "key": "starmie",
+   "moves": [
+    "HYDRO_PUMP",
+    "SWIFT",
+    "RECOVER",
+    "MINIMIZE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1796,
+   "wins": 2977,
+   "losses": 744,
+   "draws": 29,
+   "win_pct": 79.4,
+   "top10_win_pct": 42.4,
+   "level": 50
+  },
+  {
+   "rank": 13,
+   "tier": "A",
+   "name": "GYARADOS",
+   "key": "gyarados",
+   "moves": [
+    "HYDRO_PUMP",
+    "SPLASH",
+    "HYPER_BEAM",
+    "BITE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "FLYING"
+   ],
+   "elo": 1778,
+   "wins": 2931,
+   "losses": 819,
+   "draws": 0,
+   "win_pct": 78.2,
+   "top10_win_pct": 23.2,
+   "level": 50
+  },
+  {
+   "rank": 14,
+   "tier": "A-",
+   "name": "VENOMOTH",
+   "key": "venomoth",
+   "moves": [
+    "PSYCHIC_M",
+    "LEECH_LIFE",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "POISON"
+   ],
+   "elo": 1770,
+   "wins": 2903,
+   "losses": 846,
+   "draws": 1,
+   "win_pct": 77.4,
+   "top10_win_pct": 44.4,
+   "level": 50
+  },
+  {
+   "rank": 15,
+   "tier": "A-",
+   "name": "VICTREEBEL",
+   "key": "victreebel",
+   "moves": [
+    "RAZOR_LEAF",
+    "GROWTH",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1762,
+   "wins": 2878,
+   "losses": 872,
+   "draws": 0,
+   "win_pct": 76.7,
+   "top10_win_pct": 37.2,
+   "level": 50
+  },
+  {
+   "rank": 16,
+   "tier": "A-",
+   "name": "TENTACRUEL",
+   "key": "tentacruel",
+   "moves": [
+    "HYDRO_PUMP",
+    "ACID",
+    "WATER_GUN",
+    "POISON_STING"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "POISON"
+   ],
+   "elo": 1749,
+   "wins": 2831,
+   "losses": 919,
+   "draws": 0,
+   "win_pct": 75.5,
+   "top10_win_pct": 23.2,
+   "level": 50
+  },
+  {
+   "rank": 17,
+   "tier": "A-",
+   "name": "DEWGONG",
+   "key": "dewgong",
+   "moves": [
+    "ICE_BEAM",
+    "HEADBUTT",
+    "REST",
+    "AURORA_BEAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "ICE"
+   ],
+   "elo": 1751,
+   "wins": 2821,
+   "losses": 894,
+   "draws": 35,
+   "win_pct": 75.2,
+   "top10_win_pct": 30.0,
+   "level": 50
+  },
+  {
+   "rank": 18,
+   "tier": "A-",
+   "name": "GASTLY",
+   "key": "gastly",
+   "moves": [
+    "CONFUSE_RAY",
+    "DREAM_EATER",
+    "HYPNOSIS",
+    "LICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GHOST",
+    "POISON"
+   ],
+   "elo": 1745,
+   "wins": 2817,
+   "losses": 931,
+   "draws": 2,
+   "win_pct": 75.1,
+   "top10_win_pct": 33.2,
+   "level": 50
+  },
+  {
+   "rank": 19,
+   "tier": "A-",
+   "name": "POLIWRATH",
+   "key": "poliwrath",
+   "moves": [
+    "HYDRO_PUMP",
+    "BODY_SLAM",
+    "HYPNOSIS",
+    "AMNESIA"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "FIGHTING"
+   ],
+   "elo": 1744,
+   "wins": 2813,
+   "losses": 936,
+   "draws": 1,
+   "win_pct": 75.0,
+   "top10_win_pct": 27.2,
+   "level": 50
+  },
+  {
+   "rank": 20,
+   "tier": "B+",
+   "name": "SNORLAX",
+   "key": "snorlax",
+   "moves": [
+    "HARDEN",
+    "REST",
+    "BODY_SLAM",
+    "HYPER_BEAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1742,
+   "wins": 2807,
+   "losses": 941,
+   "draws": 2,
+   "win_pct": 74.9,
+   "top10_win_pct": 36.8,
+   "level": 50
+  },
+  {
+   "rank": 21,
+   "tier": "B+",
+   "name": "DRAGONITE",
+   "key": "dragonite",
+   "moves": [
+    "HYPER_BEAM",
+    "DRAGON_RAGE",
+    "THUNDER_WAVE",
+    "SLAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "DRAGON",
+    "FLYING"
+   ],
+   "elo": 1742,
+   "wins": 2807,
+   "losses": 943,
+   "draws": 0,
+   "win_pct": 74.9,
+   "top10_win_pct": 20.0,
+   "level": 50
+  },
+  {
+   "rank": 22,
+   "tier": "B+",
+   "name": "VAPOREON",
+   "key": "vaporeon",
+   "moves": [
+    "HYDRO_PUMP",
+    "AURORA_BEAM",
+    "QUICK_ATTACK",
+    "TAKE_DOWN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1737,
+   "wins": 2787,
+   "losses": 960,
+   "draws": 3,
+   "win_pct": 74.3,
+   "top10_win_pct": 20.8,
+   "level": 50
+  },
+  {
+   "rank": 23,
+   "tier": "B+",
+   "name": "JOLTEON",
+   "key": "jolteon",
+   "moves": [
+    "THUNDER",
+    "PIN_MISSILE",
+    "DOUBLE_KICK",
+    "THUNDERSHOCK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1722,
+   "wins": 2733,
+   "losses": 1013,
+   "draws": 4,
+   "win_pct": 72.9,
+   "top10_win_pct": 38.8,
+   "level": 50
+  },
+  {
+   "rank": 24,
+   "tier": "B+",
+   "name": "EXEGGUTOR",
+   "key": "exeggutor",
+   "moves": [
+    "LEECH_SEED",
+    "STOMP",
+    "SLEEP_POWDER",
+    "HYPNOSIS"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1717,
+   "wins": 2714,
+   "losses": 1036,
+   "draws": 0,
+   "win_pct": 72.4,
+   "top10_win_pct": 45.6,
+   "level": 50
+  },
+  {
+   "rank": 25,
+   "tier": "B+",
+   "name": "SLOWBRO",
+   "key": "slowbro",
+   "moves": [
+    "PSYCHIC_M",
+    "WATER_GUN",
+    "AMNESIA",
+    "CONFUSION"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1712,
+   "wins": 2695,
+   "losses": 1055,
+   "draws": 0,
+   "win_pct": 71.9,
+   "top10_win_pct": 22.8,
+   "level": 50
+  },
+  {
+   "rank": 26,
+   "tier": "B+",
+   "name": "POLIWHIRL",
+   "key": "poliwhirl",
+   "moves": [
+    "HYDRO_PUMP",
+    "BODY_SLAM",
+    "HYPNOSIS",
+    "WATER_GUN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1711,
+   "wins": 2694,
+   "losses": 1056,
+   "draws": 0,
+   "win_pct": 71.8,
+   "top10_win_pct": 39.2,
+   "level": 50
+  },
+  {
+   "rank": 27,
+   "tier": "B+",
+   "name": "KADABRA",
+   "key": "kadabra",
+   "moves": [
+    "PSYCHIC_M",
+    "RECOVER",
+    "REFLECT",
+    "PSYBEAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1701,
+   "wins": 2655,
+   "losses": 1093,
+   "draws": 2,
+   "win_pct": 70.8,
+   "top10_win_pct": 28.4,
+   "level": 50
+  },
+  {
+   "rank": 28,
+   "tier": "B+",
+   "name": "CLOYSTER",
+   "key": "cloyster",
+   "moves": [
+    "ICE_BEAM",
+    "SUPERSONIC",
+    "AURORA_BEAM",
+    "SPIKE_CANNON"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "ICE"
+   ],
+   "elo": 1701,
+   "wins": 2653,
+   "losses": 1092,
+   "draws": 5,
+   "win_pct": 70.7,
+   "top10_win_pct": 17.6,
+   "level": 50
+  },
+  {
+   "rank": 29,
+   "tier": "B+",
+   "name": "IVYSAUR",
+   "key": "ivysaur",
+   "moves": [
+    "RAZOR_LEAF",
+    "GROWL",
+    "SLEEP_POWDER",
+    "VINE_WHIP"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1694,
+   "wins": 2626,
+   "losses": 1123,
+   "draws": 1,
+   "win_pct": 70.0,
+   "top10_win_pct": 22.0,
+   "level": 50
+  },
+  {
+   "rank": 30,
+   "tier": "B+",
+   "name": "NINETALES",
+   "key": "ninetales",
+   "moves": [
+    "FLAMETHROWER",
+    "QUICK_ATTACK",
+    "EMBER",
+    "CONFUSE_RAY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1690,
+   "wins": 2610,
+   "losses": 1138,
+   "draws": 2,
+   "win_pct": 69.6,
+   "top10_win_pct": 40.0,
+   "level": 50
+  },
+  {
+   "rank": 31,
+   "tier": "B+",
+   "name": "CHARIZARD",
+   "key": "charizard",
+   "moves": [
+    "FLAMETHROWER",
+    "SLASH",
+    "EMBER",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE",
+    "FLYING"
+   ],
+   "elo": 1680,
+   "wins": 2572,
+   "losses": 1178,
+   "draws": 0,
+   "win_pct": 68.6,
+   "top10_win_pct": 24.0,
+   "level": 50
+  },
+  {
+   "rank": 32,
+   "tier": "B+",
+   "name": "KABUTOPS",
+   "key": "kabutops",
+   "moves": [
+    "SLASH",
+    "HARDEN",
+    "SCRATCH",
+    "HYDRO_PUMP"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "WATER"
+   ],
+   "elo": 1677,
+   "wins": 2560,
+   "losses": 1190,
+   "draws": 0,
+   "win_pct": 68.3,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 33,
+   "tier": "B+",
+   "name": "WEEPINBELL",
+   "key": "weepinbell",
+   "moves": [
+    "RAZOR_LEAF",
+    "ACID",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1675,
+   "wins": 2552,
+   "losses": 1198,
+   "draws": 0,
+   "win_pct": 68.1,
+   "top10_win_pct": 23.2,
+   "level": 50
+  },
+  {
+   "rank": 34,
+   "tier": "B+",
+   "name": "RAICHU",
+   "key": "raichu",
+   "moves": [
+    "THUNDERBOLT",
+    "SWIFT",
+    "DOUBLE_TEAM",
+    "THUNDER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1675,
+   "wins": 2550,
+   "losses": 1198,
+   "draws": 2,
+   "win_pct": 68.0,
+   "top10_win_pct": 35.2,
+   "level": 50
+  },
+  {
+   "rank": 35,
+   "tier": "B+",
+   "name": "VILEPLUME",
+   "key": "vileplume",
+   "moves": [
+    "PETAL_DANCE",
+    "ACID",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1668,
+   "wins": 2524,
+   "losses": 1224,
+   "draws": 2,
+   "win_pct": 67.3,
+   "top10_win_pct": 21.2,
+   "level": 50
+  },
+  {
+   "rank": 36,
+   "tier": "B+",
+   "name": "DODRIO",
+   "key": "dodrio",
+   "moves": [
+    "DRILL_PECK",
+    "TRI_ATTACK",
+    "FURY_ATTACK",
+    "PECK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1665,
+   "wins": 2513,
+   "losses": 1237,
+   "draws": 0,
+   "win_pct": 67.0,
+   "top10_win_pct": 16.8,
+   "level": 50
+  },
+  {
+   "rank": 37,
+   "tier": "B+",
+   "name": "SEADRA",
+   "key": "seadra",
+   "moves": [
+    "HYDRO_PUMP",
+    "WATER_GUN",
+    "BUBBLE",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1658,
+   "wins": 2484,
+   "losses": 1265,
+   "draws": 1,
+   "win_pct": 66.2,
+   "top10_win_pct": 16.4,
+   "level": 50
+  },
+  {
+   "rank": 38,
+   "tier": "B+",
+   "name": "OMASTAR",
+   "key": "omastar",
+   "moves": [
+    "HYDRO_PUMP",
+    "HORN_ATTACK",
+    "WATER_GUN",
+    "SPIKE_CANNON"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "WATER"
+   ],
+   "elo": 1654,
+   "wins": 2469,
+   "losses": 1281,
+   "draws": 0,
+   "win_pct": 65.8,
+   "top10_win_pct": 12.0,
+   "level": 50
+  },
+  {
+   "rank": 39,
+   "tier": "B",
+   "name": "ARCANINE",
+   "key": "arcanine",
+   "moves": [
+    "FLAMETHROWER",
+    "TAKE_DOWN",
+    "BITE",
+    "EMBER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1656,
+   "wins": 2468,
+   "losses": 1267,
+   "draws": 15,
+   "win_pct": 65.8,
+   "top10_win_pct": 22.4,
+   "level": 50
+  },
+  {
+   "rank": 40,
+   "tier": "B",
+   "name": "TANGELA",
+   "key": "tangela",
+   "moves": [
+    "VINE_WHIP",
+    "SLAM",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS"
+   ],
+   "elo": 1653,
+   "wins": 2461,
+   "losses": 1284,
+   "draws": 5,
+   "win_pct": 65.6,
+   "top10_win_pct": 22.0,
+   "level": 50
+  },
+  {
+   "rank": 41,
+   "tier": "B",
+   "name": "POLIWAG",
+   "key": "poliwag",
+   "moves": [
+    "HYDRO_PUMP",
+    "BODY_SLAM",
+    "HYPNOSIS",
+    "WATER_GUN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1647,
+   "wins": 2438,
+   "losses": 1310,
+   "draws": 2,
+   "win_pct": 65.0,
+   "top10_win_pct": 30.4,
+   "level": 50
+  },
+  {
+   "rank": 42,
+   "tier": "B",
+   "name": "TAUROS",
+   "key": "tauros",
+   "moves": [
+    "LEER",
+    "STOMP",
+    "TACKLE",
+    "RAGE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1642,
+   "wins": 2416,
+   "losses": 1331,
+   "draws": 3,
+   "win_pct": 64.4,
+   "top10_win_pct": 28.0,
+   "level": 50
+  },
+  {
+   "rank": 43,
+   "tier": "B",
+   "name": "PERSIAN",
+   "key": "persian",
+   "moves": [
+    "SLASH",
+    "BITE",
+    "FURY_SWIPES",
+    "PAY_DAY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1641,
+   "wins": 2415,
+   "losses": 1333,
+   "draws": 2,
+   "win_pct": 64.4,
+   "top10_win_pct": 21.2,
+   "level": 50
+  },
+  {
+   "rank": 44,
+   "tier": "B",
+   "name": "BLASTOISE",
+   "key": "blastoise",
+   "moves": [
+    "HYDRO_PUMP",
+    "BITE",
+    "WATER_GUN",
+    "SKULL_BASH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1641,
+   "wins": 2415,
+   "losses": 1335,
+   "draws": 0,
+   "win_pct": 64.4,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 45,
+   "tier": "B",
+   "name": "WIGGLYTUFF",
+   "key": "wigglytuff",
+   "moves": [
+    "DEFENSE_CURL",
+    "SING",
+    "REST",
+    "BODY_SLAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1640,
+   "wins": 2399,
+   "losses": 1333,
+   "draws": 18,
+   "win_pct": 64.0,
+   "top10_win_pct": 34.4,
+   "level": 50
+  },
+  {
+   "rank": 46,
+   "tier": "B",
+   "name": "DROWZEE",
+   "key": "drowzee",
+   "moves": [
+    "PSYCHIC_M",
+    "HEADBUTT",
+    "HYPNOSIS",
+    "CONFUSION"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1637,
+   "wins": 2397,
+   "losses": 1353,
+   "draws": 0,
+   "win_pct": 63.9,
+   "top10_win_pct": 38.8,
+   "level": 50
+  },
+  {
+   "rank": 47,
+   "tier": "B",
+   "name": "GOLDUCK",
+   "key": "golduck",
+   "moves": [
+    "HYDRO_PUMP",
+    "CONFUSION",
+    "FURY_SWIPES",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1634,
+   "wins": 2383,
+   "losses": 1364,
+   "draws": 3,
+   "win_pct": 63.5,
+   "top10_win_pct": 7.6,
+   "level": 50
+  },
+  {
+   "rank": 48,
+   "tier": "B",
+   "name": "GOLEM",
+   "key": "golem",
+   "moves": [
+    "EARTHQUAKE",
+    "ROCK_THROW",
+    "TACKLE",
+    "DEFENSE_CURL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "GROUND"
+   ],
+   "elo": 1628,
+   "wins": 2361,
+   "losses": 1389,
+   "draws": 0,
+   "win_pct": 63.0,
+   "top10_win_pct": 16.0,
+   "level": 50
+  },
+  {
+   "rank": 49,
+   "tier": "B",
+   "name": "KINGLER",
+   "key": "kingler",
+   "moves": [
+    "STOMP",
+    "CRABHAMMER",
+    "VICEGRIP",
+    "BUBBLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1624,
+   "wins": 2343,
+   "losses": 1406,
+   "draws": 1,
+   "win_pct": 62.5,
+   "top10_win_pct": 6.0,
+   "level": 50
+  },
+  {
+   "rank": 50,
+   "tier": "B",
+   "name": "PARASECT",
+   "key": "parasect",
+   "moves": [
+    "SLASH",
+    "LEECH_LIFE",
+    "SPORE",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "GRASS"
+   ],
+   "elo": 1624,
+   "wins": 2341,
+   "losses": 1409,
+   "draws": 0,
+   "win_pct": 62.4,
+   "top10_win_pct": 30.8,
+   "level": 50
+  },
+  {
+   "rank": 51,
+   "tier": "B",
+   "name": "ELECTABUZZ",
+   "key": "electabuzz",
+   "moves": [
+    "THUNDER",
+    "QUICK_ATTACK",
+    "THUNDERPUNCH",
+    "THUNDERSHOCK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1622,
+   "wins": 2336,
+   "losses": 1413,
+   "draws": 1,
+   "win_pct": 62.3,
+   "top10_win_pct": 28.0,
+   "level": 50
+  },
+  {
+   "rank": 52,
+   "tier": "B",
+   "name": "FEAROW",
+   "key": "fearow",
+   "moves": [
+    "DRILL_PECK",
+    "FURY_ATTACK",
+    "PECK",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1617,
+   "wins": 2315,
+   "losses": 1435,
+   "draws": 0,
+   "win_pct": 61.7,
+   "top10_win_pct": 14.4,
+   "level": 50
+  },
+  {
+   "rank": 53,
+   "tier": "B",
+   "name": "SCYTHER",
+   "key": "scyther",
+   "moves": [
+    "SLASH",
+    "WING_ATTACK",
+    "DOUBLE_TEAM",
+    "QUICK_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "FLYING"
+   ],
+   "elo": 1617,
+   "wins": 2315,
+   "losses": 1435,
+   "draws": 0,
+   "win_pct": 61.7,
+   "top10_win_pct": 13.2,
+   "level": 50
+  },
+  {
+   "rank": 54,
+   "tier": "B",
+   "name": "AERODACTYL",
+   "key": "aerodactyl",
+   "moves": [
+    "AGILITY",
+    "WING_ATTACK",
+    "HYPER_BEAM",
+    "BITE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "FLYING"
+   ],
+   "elo": 1615,
+   "wins": 2304,
+   "losses": 1445,
+   "draws": 1,
+   "win_pct": 61.4,
+   "top10_win_pct": 12.0,
+   "level": 50
+  },
+  {
+   "rank": 55,
+   "tier": "B",
+   "name": "BUTTERFREE",
+   "key": "butterfree",
+   "moves": [
+    "PSYBEAM",
+    "GUST",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "FLYING"
+   ],
+   "elo": 1611,
+   "wins": 2290,
+   "losses": 1460,
+   "draws": 0,
+   "win_pct": 61.1,
+   "top10_win_pct": 12.8,
+   "level": 50
+  },
+  {
+   "rank": 56,
+   "tier": "B",
+   "name": "FLAREON",
+   "key": "flareon",
+   "moves": [
+    "FLAMETHROWER",
+    "QUICK_ATTACK",
+    "BITE",
+    "EMBER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1611,
+   "wins": 2287,
+   "losses": 1463,
+   "draws": 0,
+   "win_pct": 61.0,
+   "top10_win_pct": 17.6,
+   "level": 50
+  },
+  {
+   "rank": 57,
+   "tier": "B",
+   "name": "DUGTRIO",
+   "key": "dugtrio",
+   "moves": [
+    "EARTHQUAKE",
+    "SLASH",
+    "DIG",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND"
+   ],
+   "elo": 1602,
+   "wins": 2251,
+   "losses": 1499,
+   "draws": 0,
+   "win_pct": 60.0,
+   "top10_win_pct": 21.2,
+   "level": 50
+  },
+  {
+   "rank": 58,
+   "tier": "B",
+   "name": "PINSIR",
+   "key": "pinsir",
+   "moves": [
+    "SLASH",
+    "FOCUS_ENERGY",
+    "HARDEN",
+    "VICEGRIP"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG"
+   ],
+   "elo": 1602,
+   "wins": 2248,
+   "losses": 1502,
+   "draws": 0,
+   "win_pct": 59.9,
+   "top10_win_pct": 10.4,
+   "level": 50
+  },
+  {
+   "rank": 59,
+   "tier": "B",
+   "name": "GLOOM",
+   "key": "gloom",
+   "moves": [
+    "PETAL_DANCE",
+    "ACID",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1594,
+   "wins": 2217,
+   "losses": 1533,
+   "draws": 0,
+   "win_pct": 59.1,
+   "top10_win_pct": 14.4,
+   "level": 50
+  },
+  {
+   "rank": 60,
+   "tier": "B",
+   "name": "SEAKING",
+   "key": "seaking",
+   "moves": [
+    "WATERFALL",
+    "PECK",
+    "HORN_ATTACK",
+    "SUPERSONIC"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1584,
+   "wins": 2171,
+   "losses": 1579,
+   "draws": 0,
+   "win_pct": 57.9,
+   "top10_win_pct": 6.0,
+   "level": 50
+  },
+  {
+   "rank": 61,
+   "tier": "B-",
+   "name": "MAGMAR",
+   "key": "magmar",
+   "moves": [
+    "FLAMETHROWER",
+    "CONFUSE_RAY",
+    "FIRE_PUNCH",
+    "EMBER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1577,
+   "wins": 2138,
+   "losses": 1606,
+   "draws": 6,
+   "win_pct": 57.0,
+   "top10_win_pct": 24.0,
+   "level": 50
+  },
+  {
+   "rank": 62,
+   "tier": "B-",
+   "name": "SANDSLASH",
+   "key": "sandslash",
+   "moves": [
+    "SLASH",
+    "POISON_STING",
+    "SWIFT",
+    "FURY_SWIPES"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND"
+   ],
+   "elo": 1572,
+   "wins": 2119,
+   "losses": 1631,
+   "draws": 0,
+   "win_pct": 56.5,
+   "top10_win_pct": 8.8,
+   "level": 50
+  },
+  {
+   "rank": 63,
+   "tier": "B-",
+   "name": "BELLSPROUT",
+   "key": "bellsprout",
+   "moves": [
+    "RAZOR_LEAF",
+    "ACID",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1561,
+   "wins": 2075,
+   "losses": 1675,
+   "draws": 0,
+   "win_pct": 55.3,
+   "top10_win_pct": 10.0,
+   "level": 50
+  },
+  {
+   "rank": 64,
+   "tier": "B-",
+   "name": "GRAVELER",
+   "key": "graveler",
+   "moves": [
+    "EARTHQUAKE",
+    "ROCK_THROW",
+    "TACKLE",
+    "DEFENSE_CURL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "GROUND"
+   ],
+   "elo": 1561,
+   "wins": 2073,
+   "losses": 1676,
+   "draws": 1,
+   "win_pct": 55.3,
+   "top10_win_pct": 13.2,
+   "level": 50
+  },
+  {
+   "rank": 65,
+   "tier": "B-",
+   "name": "KANGASKHAN",
+   "key": "kangaskhan",
+   "moves": [
+    "DIZZY_PUNCH",
+    "MEGA_PUNCH",
+    "BITE",
+    "COMET_PUNCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1556,
+   "wins": 2048,
+   "losses": 1691,
+   "draws": 11,
+   "win_pct": 54.6,
+   "top10_win_pct": 6.8,
+   "level": 50
+  },
+  {
+   "rank": 66,
+   "tier": "B-",
+   "name": "MUK",
+   "key": "muk",
+   "moves": [
+    "SLUDGE",
+    "MINIMIZE",
+    "ACID_ARMOR",
+    "DISABLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1550,
+   "wins": 2023,
+   "losses": 1726,
+   "draws": 1,
+   "win_pct": 53.9,
+   "top10_win_pct": 6.4,
+   "level": 50
+  },
+  {
+   "rank": 67,
+   "tier": "B-",
+   "name": "STARYU",
+   "key": "staryu",
+   "moves": [
+    "HYDRO_PUMP",
+    "MINIMIZE",
+    "RECOVER",
+    "WATER_GUN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1548,
+   "wins": 1995,
+   "losses": 1710,
+   "draws": 45,
+   "win_pct": 53.2,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 68,
+   "tier": "B-",
+   "name": "BULBASAUR",
+   "key": "bulbasaur",
+   "moves": [
+    "RAZOR_LEAF",
+    "TACKLE",
+    "SLEEP_POWDER",
+    "GROWL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1543,
+   "wins": 1994,
+   "losses": 1754,
+   "draws": 2,
+   "win_pct": 53.2,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 69,
+   "tier": "B-",
+   "name": "HITMONLEE",
+   "key": "hitmonlee",
+   "moves": [
+    "HI_JUMP_KICK",
+    "MEGA_KICK",
+    "JUMP_KICK",
+    "DOUBLE_KICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1543,
+   "wins": 1992,
+   "losses": 1752,
+   "draws": 6,
+   "win_pct": 53.1,
+   "top10_win_pct": 6.4,
+   "level": 50
+  },
+  {
+   "rank": 70,
+   "tier": "B-",
+   "name": "MOLTRES",
+   "key": "moltres",
+   "moves": [
+    "SKY_ATTACK",
+    "FIRE_SPIN",
+    "PECK",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE",
+    "FLYING"
+   ],
+   "elo": 1542,
+   "wins": 1990,
+   "losses": 1760,
+   "draws": 0,
+   "win_pct": 53.1,
+   "top10_win_pct": 17.2,
+   "level": 50
+  },
+  {
+   "rank": 71,
+   "tier": "B-",
+   "name": "NIDOKING",
+   "key": "nidoking",
+   "moves": [
+    "THRASH",
+    "DOUBLE_KICK",
+    "HORN_DRILL",
+    "FURY_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON",
+    "GROUND"
+   ],
+   "elo": 1540,
+   "wins": 1982,
+   "losses": 1768,
+   "draws": 0,
+   "win_pct": 52.9,
+   "top10_win_pct": 14.8,
+   "level": 50
+  },
+  {
+   "rank": 72,
+   "tier": "B-",
+   "name": "CLEFABLE",
+   "key": "clefable",
+   "moves": [
+    "POUND",
+    "SING",
+    "DOUBLESLAP",
+    "DEFENSE_CURL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1539,
+   "wins": 1980,
+   "losses": 1770,
+   "draws": 0,
+   "win_pct": 52.8,
+   "top10_win_pct": 23.6,
+   "level": 50
+  },
+  {
+   "rank": 73,
+   "tier": "B-",
+   "name": "MACHAMP",
+   "key": "machamp",
+   "moves": [
+    "SUBMISSION",
+    "KARATE_CHOP",
+    "FOCUS_ENERGY",
+    "LOW_KICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1540,
+   "wins": 1958,
+   "losses": 1744,
+   "draws": 48,
+   "win_pct": 52.2,
+   "top10_win_pct": 4.4,
+   "level": 50
+  },
+  {
+   "rank": 74,
+   "tier": "B-",
+   "name": "GOLDEEN",
+   "key": "goldeen",
+   "moves": [
+    "WATERFALL",
+    "HORN_DRILL",
+    "AGILITY",
+    "FURY_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1534,
+   "wins": 1956,
+   "losses": 1794,
+   "draws": 0,
+   "win_pct": 52.2,
+   "top10_win_pct": 19.6,
+   "level": 50
+  },
+  {
+   "rank": 75,
+   "tier": "C",
+   "name": "MRMIME",
+   "key": "mrmime",
+   "moves": [
+    "CONFUSION",
+    "LIGHT_SCREEN",
+    "SUBSTITUTE",
+    "BARRIER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1533,
+   "wins": 1953,
+   "losses": 1797,
+   "draws": 0,
+   "win_pct": 52.1,
+   "top10_win_pct": 7.2,
+   "level": 50
+  },
+  {
+   "rank": 76,
+   "tier": "C",
+   "name": "PRIMEAPE",
+   "key": "primeape",
+   "moves": [
+    "THRASH",
+    "FOCUS_ENERGY",
+    "KARATE_CHOP",
+    "LOW_KICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1523,
+   "wins": 1908,
+   "losses": 1837,
+   "draws": 5,
+   "win_pct": 50.9,
+   "top10_win_pct": 7.6,
+   "level": 50
+  },
+  {
+   "rank": 77,
+   "tier": "C",
+   "name": "WEEZING",
+   "key": "weezing",
+   "moves": [
+    "SLUDGE",
+    "TACKLE",
+    "SMOG",
+    "SMOKESCREEN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1519,
+   "wins": 1893,
+   "losses": 1857,
+   "draws": 0,
+   "win_pct": 50.5,
+   "top10_win_pct": 3.6,
+   "level": 50
+  },
+  {
+   "rank": 78,
+   "tier": "C",
+   "name": "OMANYTE",
+   "key": "omanyte",
+   "moves": [
+    "HYDRO_PUMP",
+    "HORN_ATTACK",
+    "WATER_GUN",
+    "SPIKE_CANNON"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "WATER"
+   ],
+   "elo": 1519,
+   "wins": 1891,
+   "losses": 1859,
+   "draws": 0,
+   "win_pct": 50.4,
+   "top10_win_pct": 4.8,
+   "level": 50
+  },
+  {
+   "rank": 79,
+   "tier": "C",
+   "name": "NIDOQUEEN",
+   "key": "nidoqueen",
+   "moves": [
+    "BODY_SLAM",
+    "DOUBLE_KICK",
+    "BITE",
+    "FURY_SWIPES"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON",
+    "GROUND"
+   ],
+   "elo": 1509,
+   "wins": 1849,
+   "losses": 1900,
+   "draws": 1,
+   "win_pct": 49.3,
+   "top10_win_pct": 4.4,
+   "level": 50
+  },
+  {
+   "rank": 80,
+   "tier": "C",
+   "name": "MAROWAK",
+   "key": "marowak",
+   "moves": [
+    "BONEMERANG",
+    "THRASH",
+    "BONE_CLUB",
+    "HEADBUTT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND"
+   ],
+   "elo": 1507,
+   "wins": 1836,
+   "losses": 1912,
+   "draws": 2,
+   "win_pct": 49.0,
+   "top10_win_pct": 4.8,
+   "level": 50
+  },
+  {
+   "rank": 81,
+   "tier": "C",
+   "name": "MAGNETON",
+   "key": "magneton",
+   "moves": [
+    "THUNDERSHOCK",
+    "SWIFT",
+    "THUNDER_WAVE",
+    "SONICBOOM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1506,
+   "wins": 1835,
+   "losses": 1914,
+   "draws": 1,
+   "win_pct": 48.9,
+   "top10_win_pct": 6.4,
+   "level": 50
+  },
+  {
+   "rank": 82,
+   "tier": "C",
+   "name": "ODDISH",
+   "key": "oddish",
+   "moves": [
+    "PETAL_DANCE",
+    "ACID",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "POISON"
+   ],
+   "elo": 1505,
+   "wins": 1831,
+   "losses": 1918,
+   "draws": 1,
+   "win_pct": 48.8,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 83,
+   "tier": "C",
+   "name": "VENONAT",
+   "key": "venonat",
+   "moves": [
+    "PSYCHIC_M",
+    "LEECH_LIFE",
+    "SLEEP_POWDER",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "POISON"
+   ],
+   "elo": 1504,
+   "wins": 1825,
+   "losses": 1925,
+   "draws": 0,
+   "win_pct": 48.7,
+   "top10_win_pct": 6.0,
+   "level": 50
+  },
+  {
+   "rank": 84,
+   "tier": "C",
+   "name": "TENTACOOL",
+   "key": "tentacool",
+   "moves": [
+    "HYDRO_PUMP",
+    "ACID",
+    "WATER_GUN",
+    "POISON_STING"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "POISON"
+   ],
+   "elo": 1503,
+   "wins": 1822,
+   "losses": 1926,
+   "draws": 2,
+   "win_pct": 48.6,
+   "top10_win_pct": 4.0,
+   "level": 50
+  },
+  {
+   "rank": 85,
+   "tier": "C",
+   "name": "RHYDON",
+   "key": "rhydon",
+   "moves": [
+    "HORN_DRILL",
+    "HORN_ATTACK",
+    "STOMP",
+    "FURY_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND",
+    "ROCK"
+   ],
+   "elo": 1503,
+   "wins": 1821,
+   "losses": 1928,
+   "draws": 1,
+   "win_pct": 48.6,
+   "top10_win_pct": 10.0,
+   "level": 50
+  },
+  {
+   "rank": 86,
+   "tier": "C",
+   "name": "PORYGON",
+   "key": "porygon",
+   "moves": [
+    "CONVERSION",
+    "PSYBEAM",
+    "RECOVER",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1506,
+   "wins": 1806,
+   "losses": 1889,
+   "draws": 55,
+   "win_pct": 48.2,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 87,
+   "tier": "C-",
+   "name": "RATICATE",
+   "key": "raticate",
+   "moves": [
+    "HYPER_FANG",
+    "SUPER_FANG",
+    "QUICK_ATTACK",
+    "TACKLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1499,
+   "wins": 1804,
+   "losses": 1945,
+   "draws": 1,
+   "win_pct": 48.1,
+   "top10_win_pct": 10.8,
+   "level": 50
+  },
+  {
+   "rank": 88,
+   "tier": "C-",
+   "name": "WARTORTLE",
+   "key": "wartortle",
+   "moves": [
+    "HYDRO_PUMP",
+    "BITE",
+    "WATER_GUN",
+    "SKULL_BASH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1498,
+   "wins": 1798,
+   "losses": 1951,
+   "draws": 1,
+   "win_pct": 47.9,
+   "top10_win_pct": 1.2,
+   "level": 50
+  },
+  {
+   "rank": 89,
+   "tier": "C-",
+   "name": "PARAS",
+   "key": "paras",
+   "moves": [
+    "SLASH",
+    "LEECH_LIFE",
+    "SPORE",
+    "STUN_SPORE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "GRASS"
+   ],
+   "elo": 1494,
+   "wins": 1781,
+   "losses": 1967,
+   "draws": 2,
+   "win_pct": 47.5,
+   "top10_win_pct": 14.0,
+   "level": 50
+  },
+  {
+   "rank": 90,
+   "tier": "C-",
+   "name": "PIDGEOT",
+   "key": "pidgeot",
+   "moves": [
+    "SAND_ATTACK",
+    "WING_ATTACK",
+    "QUICK_ATTACK",
+    "MIRROR_MOVE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1493,
+   "wins": 1775,
+   "losses": 1966,
+   "draws": 9,
+   "win_pct": 47.3,
+   "top10_win_pct": 3.6,
+   "level": 50
+  },
+  {
+   "rank": 91,
+   "tier": "C-",
+   "name": "RAPIDASH",
+   "key": "rapidash",
+   "moves": [
+    "AGILITY",
+    "EMBER",
+    "STOMP",
+    "GROWL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1490,
+   "wins": 1766,
+   "losses": 1982,
+   "draws": 2,
+   "win_pct": 47.1,
+   "top10_win_pct": 10.8,
+   "level": 50
+  },
+  {
+   "rank": 92,
+   "tier": "C-",
+   "name": "SLOWPOKE",
+   "key": "slowpoke",
+   "moves": [
+    "PSYCHIC_M",
+    "WATER_GUN",
+    "AMNESIA",
+    "CONFUSION"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER",
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1487,
+   "wins": 1751,
+   "losses": 1996,
+   "draws": 3,
+   "win_pct": 46.7,
+   "top10_win_pct": 7.2,
+   "level": 50
+  },
+  {
+   "rank": 93,
+   "tier": "C-",
+   "name": "CHARMELEON",
+   "key": "charmeleon",
+   "moves": [
+    "FLAMETHROWER",
+    "SLASH",
+    "EMBER",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1487,
+   "wins": 1751,
+   "losses": 1997,
+   "draws": 2,
+   "win_pct": 46.7,
+   "top10_win_pct": 8.0,
+   "level": 50
+  },
+  {
+   "rank": 94,
+   "tier": "C-",
+   "name": "KABUTO",
+   "key": "kabuto",
+   "moves": [
+    "SLASH",
+    "HYDRO_PUMP",
+    "SCRATCH",
+    "ABSORB"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "WATER"
+   ],
+   "elo": 1480,
+   "wins": 1723,
+   "losses": 2027,
+   "draws": 0,
+   "win_pct": 45.9,
+   "top10_win_pct": 4.0,
+   "level": 50
+  },
+  {
+   "rank": 95,
+   "tier": "C-",
+   "name": "GEODUDE",
+   "key": "geodude",
+   "moves": [
+    "EARTHQUAKE",
+    "ROCK_THROW",
+    "TACKLE",
+    "DEFENSE_CURL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "GROUND"
+   ],
+   "elo": 1480,
+   "wins": 1722,
+   "losses": 2028,
+   "draws": 0,
+   "win_pct": 45.9,
+   "top10_win_pct": 8.0,
+   "level": 50
+  },
+  {
+   "rank": 96,
+   "tier": "C-",
+   "name": "DRAGONAIR",
+   "key": "dragonair",
+   "moves": [
+    "HYPER_BEAM",
+    "DRAGON_RAGE",
+    "THUNDER_WAVE",
+    "SLAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "DRAGON"
+   ],
+   "elo": 1474,
+   "wins": 1696,
+   "losses": 2054,
+   "draws": 0,
+   "win_pct": 45.2,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 97,
+   "tier": "C-",
+   "name": "SEEL",
+   "key": "seel",
+   "moves": [
+    "ICE_BEAM",
+    "GROWL",
+    "REST",
+    "AURORA_BEAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1474,
+   "wins": 1685,
+   "losses": 2036,
+   "draws": 29,
+   "win_pct": 44.9,
+   "top10_win_pct": 5.2,
+   "level": 50
+  },
+  {
+   "rank": 98,
+   "tier": "C-",
+   "name": "EXEGGCUTE",
+   "key": "exeggcute",
+   "moves": [
+    "SOLARBEAM",
+    "BARRAGE",
+    "SLEEP_POWDER",
+    "HYPNOSIS"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GRASS",
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 1469,
+   "wins": 1675,
+   "losses": 2075,
+   "draws": 0,
+   "win_pct": 44.7,
+   "top10_win_pct": 9.6,
+   "level": 50
+  },
+  {
+   "rank": 99,
+   "tier": "C-",
+   "name": "HORSEA",
+   "key": "horsea",
+   "moves": [
+    "HYDRO_PUMP",
+    "WATER_GUN",
+    "BUBBLE",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1456,
+   "wins": 1623,
+   "losses": 2127,
+   "draws": 0,
+   "win_pct": 43.3,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 100,
+   "tier": "D+",
+   "name": "FARFETCHD",
+   "key": "farfetchd",
+   "moves": [
+    "SLASH",
+    "SAND_ATTACK",
+    "FURY_ATTACK",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1456,
+   "wins": 1622,
+   "losses": 2127,
+   "draws": 1,
+   "win_pct": 43.3,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 101,
+   "tier": "D+",
+   "name": "GOLBAT",
+   "key": "golbat",
+   "moves": [
+    "BITE",
+    "WING_ATTACK",
+    "LEECH_LIFE",
+    "CONFUSE_RAY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON",
+    "FLYING"
+   ],
+   "elo": 1455,
+   "wins": 1614,
+   "losses": 2134,
+   "draws": 2,
+   "win_pct": 43.0,
+   "top10_win_pct": 2.8,
+   "level": 50
+  },
+  {
+   "rank": 102,
+   "tier": "D+",
+   "name": "CHANSEY",
+   "key": "chansey",
+   "moves": [
+    "DOUBLE_EDGE",
+    "SING",
+    "POUND",
+    "DOUBLESLAP"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1447,
+   "wins": 1564,
+   "losses": 2148,
+   "draws": 38,
+   "win_pct": 41.7,
+   "top10_win_pct": 24.4,
+   "level": 50
+  },
+  {
+   "rank": 103,
+   "tier": "D+",
+   "name": "PIKACHU",
+   "key": "pikachu",
+   "moves": [
+    "THUNDERBOLT",
+    "DOUBLE_TEAM",
+    "THUNDER_WAVE",
+    "THUNDER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1440,
+   "wins": 1553,
+   "losses": 2195,
+   "draws": 2,
+   "win_pct": 41.4,
+   "top10_win_pct": 10.4,
+   "level": 50
+  },
+  {
+   "rank": 104,
+   "tier": "D+",
+   "name": "JIGGLYPUFF",
+   "key": "jigglypuff",
+   "moves": [
+    "DOUBLESLAP",
+    "SING",
+    "REST",
+    "BODY_SLAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1431,
+   "wins": 1517,
+   "losses": 2231,
+   "draws": 2,
+   "win_pct": 40.5,
+   "top10_win_pct": 16.4,
+   "level": 50
+  },
+  {
+   "rank": 105,
+   "tier": "D+",
+   "name": "HITMONCHAN",
+   "key": "hitmonchan",
+   "moves": [
+    "MEGA_PUNCH",
+    "ICE_PUNCH",
+    "COUNTER",
+    "THUNDERPUNCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1427,
+   "wins": 1502,
+   "losses": 2248,
+   "draws": 0,
+   "win_pct": 40.1,
+   "top10_win_pct": 3.6,
+   "level": 50
+  },
+  {
+   "rank": 106,
+   "tier": "D+",
+   "name": "DODUO",
+   "key": "doduo",
+   "moves": [
+    "DRILL_PECK",
+    "TRI_ATTACK",
+    "FURY_ATTACK",
+    "PECK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1415,
+   "wins": 1448,
+   "losses": 2299,
+   "draws": 3,
+   "win_pct": 38.6,
+   "top10_win_pct": 4.8,
+   "level": 50
+  },
+  {
+   "rank": 107,
+   "tier": "D+",
+   "name": "MACHOKE",
+   "key": "machoke",
+   "moves": [
+    "SUBMISSION",
+    "KARATE_CHOP",
+    "SEISMIC_TOSS",
+    "LOW_KICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1414,
+   "wins": 1418,
+   "losses": 2275,
+   "draws": 57,
+   "win_pct": 37.8,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 108,
+   "tier": "D+",
+   "name": "MEOWTH",
+   "key": "meowth",
+   "moves": [
+    "SLASH",
+    "BITE",
+    "FURY_SWIPES",
+    "PAY_DAY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1389,
+   "wins": 1348,
+   "losses": 2400,
+   "draws": 2,
+   "win_pct": 35.9,
+   "top10_win_pct": 2.8,
+   "level": 50
+  },
+  {
+   "rank": 109,
+   "tier": "D+",
+   "name": "PSYDUCK",
+   "key": "psyduck",
+   "moves": [
+    "HYDRO_PUMP",
+    "CONFUSION",
+    "FURY_SWIPES",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1387,
+   "wins": 1335,
+   "losses": 2407,
+   "draws": 8,
+   "win_pct": 35.6,
+   "top10_win_pct": 0.4,
+   "level": 50
+  },
+  {
+   "rank": 110,
+   "tier": "D+",
+   "name": "VULPIX",
+   "key": "vulpix",
+   "moves": [
+    "FLAMETHROWER",
+    "QUICK_ATTACK",
+    "EMBER",
+    "CONFUSE_RAY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1381,
+   "wins": 1316,
+   "losses": 2430,
+   "draws": 4,
+   "win_pct": 35.1,
+   "top10_win_pct": 4.4,
+   "level": 50
+  },
+  {
+   "rank": 111,
+   "tier": "D+",
+   "name": "SQUIRTLE",
+   "key": "squirtle",
+   "moves": [
+    "HYDRO_PUMP",
+    "BITE",
+    "WATER_GUN",
+    "SKULL_BASH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1371,
+   "wins": 1278,
+   "losses": 2470,
+   "draws": 2,
+   "win_pct": 34.1,
+   "top10_win_pct": 0.4,
+   "level": 50
+  },
+  {
+   "rank": 112,
+   "tier": "D+",
+   "name": "SHELLDER",
+   "key": "shellder",
+   "moves": [
+    "ICE_BEAM",
+    "CLAMP",
+    "AURORA_BEAM",
+    "TACKLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1365,
+   "wins": 1255,
+   "losses": 2494,
+   "draws": 1,
+   "win_pct": 33.5,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 113,
+   "tier": "D+",
+   "name": "CUBONE",
+   "key": "cubone",
+   "moves": [
+    "BONEMERANG",
+    "THRASH",
+    "BONE_CLUB",
+    "HEADBUTT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND"
+   ],
+   "elo": 1365,
+   "wins": 1254,
+   "losses": 2496,
+   "draws": 0,
+   "win_pct": 33.4,
+   "top10_win_pct": 2.0,
+   "level": 50
+  },
+  {
+   "rank": 114,
+   "tier": "D+",
+   "name": "KRABBY",
+   "key": "krabby",
+   "moves": [
+    "STOMP",
+    "CRABHAMMER",
+    "VICEGRIP",
+    "GUILLOTINE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 1362,
+   "wins": 1244,
+   "losses": 2506,
+   "draws": 0,
+   "win_pct": 33.2,
+   "top10_win_pct": 2.0,
+   "level": 50
+  },
+  {
+   "rank": 115,
+   "tier": "D+",
+   "name": "DIGLETT",
+   "key": "diglett",
+   "moves": [
+    "EARTHQUAKE",
+    "SLASH",
+    "DIG",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND"
+   ],
+   "elo": 1361,
+   "wins": 1239,
+   "losses": 2509,
+   "draws": 2,
+   "win_pct": 33.0,
+   "top10_win_pct": 3.6,
+   "level": 50
+  },
+  {
+   "rank": 116,
+   "tier": "D+",
+   "name": "PONYTA",
+   "key": "ponyta",
+   "moves": [
+    "GROWL",
+    "EMBER",
+    "STOMP",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1357,
+   "wins": 1225,
+   "losses": 2523,
+   "draws": 2,
+   "win_pct": 32.7,
+   "top10_win_pct": 6.0,
+   "level": 50
+  },
+  {
+   "rank": 117,
+   "tier": "D+",
+   "name": "NIDORINO",
+   "key": "nidorino",
+   "moves": [
+    "HORN_ATTACK",
+    "DOUBLE_KICK",
+    "HORN_DRILL",
+    "TACKLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1354,
+   "wins": 1214,
+   "losses": 2536,
+   "draws": 0,
+   "win_pct": 32.4,
+   "top10_win_pct": 3.6,
+   "level": 50
+  },
+  {
+   "rank": 118,
+   "tier": "D+",
+   "name": "ONIX",
+   "key": "onix",
+   "moves": [
+    "SLAM",
+    "ROCK_THROW",
+    "TACKLE",
+    "SCREECH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ROCK",
+    "GROUND"
+   ],
+   "elo": 1335,
+   "wins": 1145,
+   "losses": 2605,
+   "draws": 0,
+   "win_pct": 30.5,
+   "top10_win_pct": 6.8,
+   "level": 50
+  },
+  {
+   "rank": 119,
+   "tier": "D+",
+   "name": "CHARMANDER",
+   "key": "charmander",
+   "moves": [
+    "FLAMETHROWER",
+    "SLASH",
+    "EMBER",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1336,
+   "wins": 1143,
+   "losses": 2602,
+   "draws": 5,
+   "win_pct": 30.5,
+   "top10_win_pct": 2.8,
+   "level": 50
+  },
+  {
+   "rank": 120,
+   "tier": "D+",
+   "name": "ARBOK",
+   "key": "arbok",
+   "moves": [
+    "ACID",
+    "BITE",
+    "GLARE",
+    "POISON_STING"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1331,
+   "wins": 1129,
+   "losses": 2620,
+   "draws": 1,
+   "win_pct": 30.1,
+   "top10_win_pct": 2.8,
+   "level": 50
+  },
+  {
+   "rank": 121,
+   "tier": "D",
+   "name": "BEEDRILL",
+   "key": "beedrill",
+   "moves": [
+    "TWINEEDLE",
+    "POISON_STING",
+    "PIN_MISSILE",
+    "FURY_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "POISON"
+   ],
+   "elo": 1324,
+   "wins": 1105,
+   "losses": 2645,
+   "draws": 0,
+   "win_pct": 29.5,
+   "top10_win_pct": 6.8,
+   "level": 50
+  },
+  {
+   "rank": 122,
+   "tier": "D",
+   "name": "CLEFAIRY",
+   "key": "clefairy",
+   "moves": [
+    "METRONOME",
+    "SING",
+    "DOUBLESLAP",
+    "DEFENSE_CURL"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1325,
+   "wins": 1104,
+   "losses": 2641,
+   "draws": 5,
+   "win_pct": 29.4,
+   "top10_win_pct": 6.4,
+   "level": 50
+  },
+  {
+   "rank": 123,
+   "tier": "D",
+   "name": "GROWLITHE",
+   "key": "growlithe",
+   "moves": [
+    "FLAMETHROWER",
+    "TAKE_DOWN",
+    "BITE",
+    "EMBER"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIRE"
+   ],
+   "elo": 1326,
+   "wins": 1101,
+   "losses": 2627,
+   "draws": 22,
+   "win_pct": 29.4,
+   "top10_win_pct": 1.2,
+   "level": 50
+  },
+  {
+   "rank": 124,
+   "tier": "D",
+   "name": "RHYHORN",
+   "key": "rhyhorn",
+   "moves": [
+    "HORN_DRILL",
+    "HORN_ATTACK",
+    "STOMP",
+    "FURY_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND",
+    "ROCK"
+   ],
+   "elo": 1322,
+   "wins": 1096,
+   "losses": 2654,
+   "draws": 0,
+   "win_pct": 29.2,
+   "top10_win_pct": 2.0,
+   "level": 50
+  },
+  {
+   "rank": 125,
+   "tier": "D",
+   "name": "MAGNEMITE",
+   "key": "magnemite",
+   "moves": [
+    "THUNDERSHOCK",
+    "SWIFT",
+    "THUNDER_WAVE",
+    "SCREECH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1320,
+   "wins": 1090,
+   "losses": 2660,
+   "draws": 0,
+   "win_pct": 29.1,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 126,
+   "tier": "D",
+   "name": "GRIMER",
+   "key": "grimer",
+   "moves": [
+    "SLUDGE",
+    "POUND",
+    "ACID_ARMOR",
+    "MINIMIZE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1317,
+   "wins": 1076,
+   "losses": 2671,
+   "draws": 3,
+   "win_pct": 28.7,
+   "top10_win_pct": 0.4,
+   "level": 50
+  },
+  {
+   "rank": 127,
+   "tier": "D",
+   "name": "LICKITUNG",
+   "key": "lickitung",
+   "moves": [
+    "STOMP",
+    "SLAM",
+    "SUPERSONIC",
+    "SCREECH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1309,
+   "wins": 1051,
+   "losses": 2697,
+   "draws": 2,
+   "win_pct": 28.0,
+   "top10_win_pct": 2.0,
+   "level": 50
+  },
+  {
+   "rank": 128,
+   "tier": "D",
+   "name": "PIDGEOTTO",
+   "key": "pidgeotto",
+   "moves": [
+    "MIRROR_MOVE",
+    "WING_ATTACK",
+    "QUICK_ATTACK",
+    "SAND_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1305,
+   "wins": 1036,
+   "losses": 2711,
+   "draws": 3,
+   "win_pct": 27.6,
+   "top10_win_pct": 0.8,
+   "level": 50
+  },
+  {
+   "rank": 129,
+   "tier": "D",
+   "name": "SANDSHREW",
+   "key": "sandshrew",
+   "moves": [
+    "SLASH",
+    "POISON_STING",
+    "SWIFT",
+    "FURY_SWIPES"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "GROUND"
+   ],
+   "elo": 1302,
+   "wins": 1028,
+   "losses": 2721,
+   "draws": 1,
+   "win_pct": 27.4,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 130,
+   "tier": "D",
+   "name": "DRATINI",
+   "key": "dratini",
+   "moves": [
+    "HYPER_BEAM",
+    "DRAGON_RAGE",
+    "THUNDER_WAVE",
+    "SLAM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "DRAGON"
+   ],
+   "elo": 1294,
+   "wins": 999,
+   "losses": 2750,
+   "draws": 1,
+   "win_pct": 26.6,
+   "top10_win_pct": 1.6,
+   "level": 50
+  },
+  {
+   "rank": 131,
+   "tier": "D",
+   "name": "SPEAROW",
+   "key": "spearow",
+   "moves": [
+    "DRILL_PECK",
+    "MIRROR_MOVE",
+    "PECK",
+    "AGILITY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1292,
+   "wins": 990,
+   "losses": 2752,
+   "draws": 8,
+   "win_pct": 26.4,
+   "top10_win_pct": 4.8,
+   "level": 50
+  },
+  {
+   "rank": 132,
+   "tier": "D",
+   "name": "MACHOP",
+   "key": "machop",
+   "moves": [
+    "SUBMISSION",
+    "KARATE_CHOP",
+    "SEISMIC_TOSS",
+    "LOW_KICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1287,
+   "wins": 959,
+   "losses": 2757,
+   "draws": 34,
+   "win_pct": 25.6,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 133,
+   "tier": "D",
+   "name": "KOFFING",
+   "key": "koffing",
+   "moves": [
+    "SLUDGE",
+    "TACKLE",
+    "SMOG",
+    "SMOKESCREEN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1265,
+   "wins": 905,
+   "losses": 2843,
+   "draws": 2,
+   "win_pct": 24.1,
+   "top10_win_pct": 1.2,
+   "level": 50
+  },
+  {
+   "rank": 134,
+   "tier": "D",
+   "name": "MANKEY",
+   "key": "mankey",
+   "moves": [
+    "THRASH",
+    "SEISMIC_TOSS",
+    "SCREECH",
+    "LOW_KICK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "FIGHTING"
+   ],
+   "elo": 1259,
+   "wins": 885,
+   "losses": 2864,
+   "draws": 1,
+   "win_pct": 23.6,
+   "top10_win_pct": 2.4,
+   "level": 50
+  },
+  {
+   "rank": 135,
+   "tier": "D",
+   "name": "ELECTRODE",
+   "key": "electrode",
+   "moves": [
+    "SWIFT",
+    "SONICBOOM",
+    "SCREECH",
+    "LIGHT_SCREEN"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 1236,
+   "wins": 815,
+   "losses": 2931,
+   "draws": 4,
+   "win_pct": 21.7,
+   "top10_win_pct": 0.8,
+   "level": 50
+  },
+  {
+   "rank": 136,
+   "tier": "D",
+   "name": "NIDORANM",
+   "key": "nidoranm",
+   "moves": [
+    "HORN_ATTACK",
+    "DOUBLE_KICK",
+    "HORN_DRILL",
+    "TACKLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1228,
+   "wins": 792,
+   "losses": 2957,
+   "draws": 1,
+   "win_pct": 21.1,
+   "top10_win_pct": 2.0,
+   "level": 50
+  },
+  {
+   "rank": 137,
+   "tier": "D",
+   "name": "EEVEE",
+   "key": "eevee",
+   "moves": [
+    "TAKE_DOWN",
+    "BITE",
+    "QUICK_ATTACK",
+    "TACKLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1225,
+   "wins": 763,
+   "losses": 2941,
+   "draws": 46,
+   "win_pct": 20.3,
+   "top10_win_pct": 1.2,
+   "level": 50
+  },
+  {
+   "rank": 138,
+   "tier": "F",
+   "name": "NIDORINA",
+   "key": "nidorina",
+   "moves": [
+    "BITE",
+    "DOUBLE_KICK",
+    "FURY_SWIPES",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1211,
+   "wins": 745,
+   "losses": 3003,
+   "draws": 2,
+   "win_pct": 19.9,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 139,
+   "tier": "F",
+   "name": "DITTO",
+   "key": "ditto",
+   "moves": [
+    "TRANSFORM"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1208,
+   "wins": 732,
+   "losses": 3005,
+   "draws": 13,
+   "win_pct": 19.5,
+   "top10_win_pct": 9.2,
+   "level": 50
+  },
+  {
+   "rank": 140,
+   "tier": "F",
+   "name": "RATTATA",
+   "key": "rattata",
+   "moves": [
+    "HYPER_FANG",
+    "SUPER_FANG",
+    "QUICK_ATTACK",
+    "TACKLE"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL"
+   ],
+   "elo": 1190,
+   "wins": 688,
+   "losses": 3060,
+   "draws": 2,
+   "win_pct": 18.3,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 141,
+   "tier": "F",
+   "name": "PIDGEY",
+   "key": "pidgey",
+   "moves": [
+    "MIRROR_MOVE",
+    "WING_ATTACK",
+    "QUICK_ATTACK",
+    "SAND_ATTACK"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "NORMAL",
+    "FLYING"
+   ],
+   "elo": 1115,
+   "wins": 509,
+   "losses": 3235,
+   "draws": 6,
+   "win_pct": 13.6,
+   "top10_win_pct": 1.2,
+   "level": 50
+  },
+  {
+   "rank": 142,
+   "tier": "F",
+   "name": "EKANS",
+   "key": "ekans",
+   "moves": [
+    "ACID",
+    "BITE",
+    "GLARE",
+    "SCREECH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1101,
+   "wins": 482,
+   "losses": 3268,
+   "draws": 0,
+   "win_pct": 12.9,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 143,
+   "tier": "F",
+   "name": "ZUBAT",
+   "key": "zubat",
+   "moves": [
+    "BITE",
+    "HAZE",
+    "LEECH_LIFE",
+    "CONFUSE_RAY"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON",
+    "FLYING"
+   ],
+   "elo": 1088,
+   "wins": 456,
+   "losses": 3293,
+   "draws": 1,
+   "win_pct": 12.2,
+   "top10_win_pct": 1.2,
+   "level": 50
+  },
+  {
+   "rank": 144,
+   "tier": "F",
+   "name": "NIDORANF",
+   "key": "nidoranf",
+   "moves": [
+    "BITE",
+    "DOUBLE_KICK",
+    "FURY_SWIPES",
+    "SCRATCH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "POISON"
+   ],
+   "elo": 1047,
+   "wins": 382,
+   "losses": 3367,
+   "draws": 1,
+   "win_pct": 10.2,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 145,
+   "tier": "F",
+   "name": "VOLTORB",
+   "key": "voltorb",
+   "moves": [
+    "SWIFT",
+    "SONICBOOM",
+    "TACKLE",
+    "SCREECH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "ELECTRIC"
+   ],
+   "elo": 980,
+   "wins": 280,
+   "losses": 3470,
+   "draws": 0,
+   "win_pct": 7.5,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 146,
+   "tier": "F",
+   "name": "KAKUNA",
+   "key": "kakuna",
+   "moves": [
+    "POISON_STING",
+    "HARDEN",
+    "STRING_SHOT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "POISON"
+   ],
+   "elo": 856,
+   "wins": 140,
+   "losses": 3608,
+   "draws": 2,
+   "win_pct": 3.7,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 147,
+   "tier": "Z",
+   "name": "WEEDLE",
+   "key": "weedle",
+   "moves": [
+    "POISON_STING",
+    "STRING_SHOT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG",
+    "POISON"
+   ],
+   "elo": 824,
+   "wins": 112,
+   "losses": 3636,
+   "draws": 2,
+   "win_pct": 3.0,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 148,
+   "tier": "Z",
+   "name": "METAPOD",
+   "key": "metapod",
+   "moves": [
+    "TACKLE",
+    "HARDEN",
+    "STRING_SHOT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG"
+   ],
+   "elo": 797,
+   "wins": 92,
+   "losses": 3657,
+   "draws": 1,
+   "win_pct": 2.5,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 149,
+   "tier": "Z",
+   "name": "CATERPIE",
+   "key": "caterpie",
+   "moves": [
+    "TACKLE",
+    "STRING_SHOT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "BUG"
+   ],
+   "elo": 780,
+   "wins": 80,
+   "losses": 3670,
+   "draws": 0,
+   "win_pct": 2.1,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 150,
+   "tier": "Z",
+   "name": "MAGIKARP",
+   "key": "magikarp",
+   "moves": [
+    "TACKLE",
+    "SPLASH"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "WATER"
+   ],
+   "elo": 766,
+   "wins": 71,
+   "losses": 3679,
+   "draws": 0,
+   "win_pct": 1.9,
+   "top10_win_pct": 0.0,
+   "level": 50
+  },
+  {
+   "rank": 151,
+   "tier": "Z",
+   "name": "ABRA",
+   "key": "abra",
+   "moves": [
+    "TELEPORT"
+   ],
+   "required_item": null,
+   "form": null,
+   "types": [
+    "PSYCHIC_TYPE"
+   ],
+   "elo": 632,
+   "wins": 0,
+   "losses": 3750,
+   "draws": 0,
+   "win_pct": 0.0,
+   "top10_win_pct": 0.0,
+   "level": 50
+  }
+ ],
+ "type_stats": [
+  {
+   "type": "POISON",
+   "pokemon": 33,
+   "top_n": 7,
+   "avg_win_pct": 47.0
+  },
+  {
+   "type": "PSYCHIC",
+   "pokemon": 14,
+   "top_n": 6,
+   "avg_win_pct": 67.0
+  },
+  {
+   "type": "WATER",
+   "pokemon": 32,
+   "top_n": 6,
+   "avg_win_pct": 57.5
+  },
+  {
+   "type": "ICE",
+   "pokemon": 5,
+   "top_n": 4,
+   "avg_win_pct": 79.6
+  },
+  {
+   "type": "GHOST",
+   "pokemon": 3,
+   "top_n": 3,
+   "avg_win_pct": 80.5
+  },
+  {
+   "type": "FLYING",
+   "pokemon": 19,
+   "top_n": 3,
+   "avg_win_pct": 53.2
+  },
+  {
+   "type": "GRASS",
+   "pokemon": 14,
+   "top_n": 2,
+   "avg_win_pct": 62.4
+  },
+  {
+   "type": "ELECTRIC",
+   "pokemon": 9,
+   "top_n": 1,
+   "avg_win_pct": 48.6
+  },
+  {
+   "type": "FIGHTING",
+   "pokemon": 8,
+   "top_n": 1,
+   "avg_win_pct": 44.8
+  },
+  {
+   "type": "NORMAL",
+   "pokemon": 24,
+   "top_n": 1,
+   "avg_win_pct": 42.9
+  },
+  {
+   "type": "BUG",
+   "pokemon": 12,
+   "top_n": 1,
+   "avg_win_pct": 38.3
+  },
+  {
+   "type": "ROCK",
+   "pokemon": 11,
+   "top_n": 0,
+   "avg_win_pct": 51.3
+  },
+  {
+   "type": "FIRE",
+   "pokemon": 12,
+   "top_n": 0,
+   "avg_win_pct": 49.7
+  },
+  {
+   "type": "DRAGON",
+   "pokemon": 3,
+   "top_n": 0,
+   "avg_win_pct": 48.9
+  },
+  {
+   "type": "GROUND",
+   "pokemon": 14,
+   "top_n": 0,
+   "avg_win_pct": 45.3
+  }
+ ]
+}

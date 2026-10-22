@@ -1,0 +1,5 @@
+== run_start: preset=thorough
+== stage: name=seed, label=Seed movesets
+== stage: name=tournament, label=Round-robin battles
+== stage: name=results, label=Ratings and ranks
+== done: seconds=17.6

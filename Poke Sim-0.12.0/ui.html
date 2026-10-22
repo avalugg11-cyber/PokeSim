@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poke Sim — local run</title>
+<style>
+:root{
+  --bg:#c9d2a8; --panel:#dde4c2; --panel2:#d2dab4; --ink:#1c2a17; --mute:#4f6045; --line:#9fae82;
+  --accent:#306230; --accent-ink:#eef3d6; --deep:#0f380f; --warn:#8a2d1f; --gain:#1f5d1f; --hi:#f1e7a3;
+  --bar:#306230; --bar-bg:#b7c394;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#101d0d; --panel:#172a12; --panel2:#1d3317; --ink:#d6e4b0; --mute:#92a877; --line:#2f4a27;
+    --accent:#9bbc0f; --accent-ink:#0f1c0b; --deep:#c4dc6c; --warn:#e08a78; --gain:#b4d85a; --hi:#3a3a10;
+    --bar:#9bbc0f; --bar-bg:#27401f;
+  }
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;line-height:1.45;font-variant-numeric:tabular-nums}
+h1,h2,h3{margin:0;font-weight:650;letter-spacing:-.01em}
+h1{font-size:1.5rem}
+h2{font-size:1.1rem;margin-bottom:.6rem}
+h3{font-size:.95rem;margin-bottom:.4rem}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:18px 18px 60px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+header p{margin:2px 0 0;color:var(--mute);font-size:.9rem}
+.pill{padding:4px 12px;border-radius:99px;background:var(--panel2);border:1px solid var(--line);font-size:.85rem}
+.pill.run{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pill.err{background:var(--warn);color:#fff;border-color:var(--warn)}
+.grid{display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px}
+.stack>*+*{margin-top:14px}
+label{display:block;font-size:.85rem;color:var(--mute);margin-top:9px}
+input[type=number]:not(#vSeed),select{width:100%;padding:6px 8px;border:1px solid var(--line);background:var(--bg);border-radius:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg{display:flex;border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.seg button{flex:1;padding:7px 4px;background:transparent;border:0;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.chk{display:flex;gap:8px;align-items:flex-start;margin-top:10px;font-size:.88rem;color:var(--ink)}
+.chk input{margin-top:3px}
+.btn{padding:9px 14px;border-radius:5px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.stop{background:var(--warn);border-color:var(--warn);color:#fff}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btns{display:flex;gap:8px;margin-top:14px}
+.btns .btn{flex:1}
+.small{font-size:.82rem;color:var(--mute)}
+details summary{cursor:pointer;color:var(--mute);font-size:.88rem;margin-top:10px}
+/* stepper */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+.step{padding:10px 12px;border-right:1px solid var(--line);position:relative}
+.step:last-child{border-right:0}
+.step b{display:block;font-size:.95rem}
+.step span{font-size:.8rem;color:var(--mute)}
+.step.active{background:var(--accent);color:var(--accent-ink)}
+.step.active span{color:var(--accent-ink);opacity:.85}
+.step.done b::before{content:"\2713  ";color:var(--gain)}
+.step.done{background:var(--panel2)}
+@media(max-width:600px){.steps{grid-template-columns:1fr 1fr}}
+/* progress */
+.bar{height:12px;background:var(--bar-bg);border-radius:3px;overflow:hidden;margin:6px 0}
+.bar i{display:block;height:100%;background:var(--bar);width:0;transition:width .3s}
+.stats{display:flex;flex-wrap:wrap;gap:6px 22px;margin:8px 0}
+.stats div{min-width:90px}
+.stats b{display:block;font-size:1.15rem}
+.stats span{font-size:.78rem;color:var(--mute)}
+/* now card */
+.now{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:12px;margin-top:10px}
+.now .nm{font-size:1.15rem;font-weight:700}
+.mv{display:inline-block;padding:2px 8px;margin:2px 4px 2px 0;border-radius:3px;background:var(--bg);border:1px solid var(--line);font-size:.85rem}
+.mv.add{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.mv.rem{text-decoration:line-through;color:var(--mute)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:5px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--mute);font-size:.8rem;position:sticky;top:0;background:var(--panel);cursor:default;white-space:nowrap}
+th.s{cursor:pointer}
+td.n,th.n{text-align:right}
+tr.chg td{background:var(--hi)}
+.scroll{max-height:380px;overflow:auto;border:1px solid var(--line);border-radius:5px;background:var(--panel)}
+.feed{max-height:300px;overflow:auto;border:1px solid var(--line);border-radius:5px;background:var(--panel)}
+.feed div{padding:4px 9px;border-bottom:1px solid var(--line);font-size:.86rem}
+.feed .c{background:var(--hi)}
+.tag{font-weight:700;margin-right:6px}
+.tag.y{color:var(--gain)}
+.tier{display:inline-block;min-width:2.1em;text-align:center;font-weight:700;border-radius:3px;padding:0 4px;background:var(--panel2);border:1px solid var(--line)}
+.tier.S,.tier.A\+,.tier.A{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.hidden{display:none!important}
+.err{background:var(--warn);color:#fff;border-radius:5px;padding:10px 12px;white-space:pre-wrap;font-family:ui-monospace,Consolas,monospace;font-size:.8rem}
+.chart{width:100%;height:120px}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.toolbar input[type=text]{padding:6px 8px;border:1px solid var(--line);background:var(--bg);border-radius:4px;min-width:200px;font:inherit;color:inherit}
+a{color:var(--accent)}
+@media (prefers-color-scheme: dark){a{color:var(--deep)}}
+/* battle viewer */
+.hp{display:flex;align-items:center;gap:6px;min-width:150px}
+.hp .bar{flex:1;height:8px;margin:0}
+.hp .bar i{background:var(--bar)}
+.hp .bar i.low{background:var(--warn)}
+.hp small{width:64px;text-align:right}
+tr.me td{font-weight:600}
+.win{font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1 id="title">Poke Sim — running on this computer</h1>
+    <p>Moveset convergence, then the round-robin battles, then the results. Nothing leaves your machine. <b>Build 0.12.0</b> (Gen 1–4). All Pokémon battle at level 50 with full natural learnsets.</p>
+  </div>
+  <span id="status" class="pill">idle</span>
+</header>
+
+<div class="grid">
+<aside class="stack">
+  <div class="card">
+    <h2>Run settings</h2>
+    <label class="small" for="genSel">Generation</label>
+    <select id="genSel" style="width:100%;margin:2px 0 10px"></select>
+    <p class="small">Level-up moves only; baby Pokémon may also use egg moves. No TM/HM or tutor moves.</p>
+    <div class="seg" id="presets">
+      <button data-p="quick">Quick</button>
+      <button data-p="standard" class="on">Standard</button>
+      <button data-p="thorough">Thorough</button>
+    </div>
+    <p class="small" id="presetNote"></p>
+    <details>
+      <summary>Fine-tune</summary>
+      <div class="row2">
+        <div><label>Search passes (max)</label><input type="number" id="passes" min="1"></div>
+        <div><label>Opponent sample</label><input type="number" id="sample" min="2"></div>
+        <div><label>Screen games</label><input type="number" id="screen_games" min="1"></div>
+        <div><label>Confirm games</label><input type="number" id="confirm_games" min="2"></div>
+        <div><label>Games per pairing</label><input type="number" id="games" min="1"></div>
+        <div><label>Accept margin %</label><input type="number" id="margin" step="0.5" value="1.5"></div>
+        <div><label>CPU cores</label><input type="number" id="procs" min="1"></div>
+        <div><label>Tournament seed</label><input type="number" id="seed" placeholder="random"></div>
+      </div>
+      <label>Search time limit, minutes (0 = none)</label><input type="number" id="minutes" value="0" min="0">
+    </details>
+    <label class="chk"><input type="checkbox" id="fresh">
+      <span>Start movesets from scratch (heuristic seeds). Uncheck to continue from the current <code>out/genN/movesets.json</code>.</span></label>
+    <label class="chk"><input type="checkbox" id="skip_search">
+      <span>Skip convergence, only run the battles with the current movesets.</span></label>
+    <div class="btns">
+      <button class="btn" id="start">Start run</button>
+      <button class="btn stop hidden" id="stop">Stop</button>
+    </div>
+    <p class="small">Movesets are saved after every accepted change, so a stopped run keeps its progress. The old set is backed up to <code>out/genN/movesets.prev.json</code> on a fresh start.</p>
+  </div>
+  <div class="card">
+    <h2>Files</h2>
+    <p class="small" style="margin:0 0 6px">Written to the <code>out/</code> folder next to this app.</p>
+    <a href="/download/results.csv">results.csv</a> · <a href="/download/results.json">results.json</a> · <a href="/download/movesets.json">movesets.json</a>
+  </div>
+</aside>
+
+<main class="stack">
+  <div class="steps" id="steps">
+    <div class="step" data-s="seed"><b>Seed movesets</b><span>heuristic starting sets</span></div>
+    <div class="step" data-s="converge"><b>Convergence</b><span>search builds</span></div>
+    <div class="step" data-s="tournament"><b>Battles</b><span>round robin</span></div>
+    <div class="step" data-s="results"><b>Results</b><span>ranks and tiers</span></div>
+  </div>
+
+  <div id="err" class="err hidden"></div>
+
+  <section class="card" id="convCard">
+    <h2>Moveset convergence</h2>
+    <p class="small" id="convIdle">Each Pokémon's set is tried against every one-move swap. A swap is accepted only if it wins clearly more battles on fresh seeds. Passes repeat until nothing changes.</p>
+    <div id="convBody" class="hidden">
+      <div class="stats">
+        <div><b id="mPass">–</b><span>pass</span></div>
+        <div><b id="mMon">–</b><span>Pokémon this pass</span></div>
+        <div><b id="mChanged">–</b><span>sets changed this pass</span></div>
+        <div><b id="mBattles">–</b><span>search battles</span></div>
+        <div><b id="mEta">–</b><span>pass ETA</span></div>
+      </div>
+      <div class="bar"><i id="convBar"></i></div>
+      <div id="verdict" class="small"></div>
+      <div class="now" id="now">
+        <div class="nm" id="nowName">–</div>
+        <div id="nowMoves"></div>
+        <div class="small" id="nowInfo"></div>
+        <div id="nowDetail"></div>
+      </div>
+      <h3 style="margin-top:14px">Sets changed per pass</h3>
+      <svg class="chart" id="chart" viewBox="0 0 600 120" preserveAspectRatio="none"></svg>
+      <div class="toolbar" style="margin-top:12px">
+        <h3 style="margin:0">Decision log</h3>
+        <label class="chk" style="margin:0"><input type="checkbox" id="onlyChg"> changes only</label>
+      </div>
+      <div class="feed" id="feed"></div>
+      <div class="toolbar" style="margin-top:14px">
+        <h3 style="margin:0">All movesets</h3>
+        <input type="text" id="setFilter" placeholder="filter by Pokémon or move">
+        <label class="chk" style="margin:0"><input type="checkbox" id="setChgOnly"> changed from the seed only</label>
+      </div>
+      <div class="scroll"><table id="setTable"><thead><tr><th>Pokémon</th><th>Seed set</th><th>Current set</th><th class="n">Changes</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section class="card" id="batCard">
+    <h2>Battles</h2>
+    <p class="small" id="batIdle">Every Pokémon fights every other one, alternating sides, with the final movesets.</p>
+    <div id="batBody" class="hidden">
+      <div class="stats">
+        <div><b id="bDone">–</b><span>battles run</span></div>
+        <div><b id="bTotal">–</b><span>battles total</span></div>
+        <div><b id="bRate">–</b><span>battles / second</span></div>
+        <div><b id="bEta">–</b><span>time left</span></div>
+      </div>
+      <div class="bar"><i id="batBar"></i></div>
+    </div>
+  </section>
+
+  <section class="card" id="resCard">
+    <h2>Results</h2>
+    <p class="small" id="resMeta">No results yet.</p>
+    <div id="typeStats" style="margin:8px 0"></div>
+    <div class="toolbar">
+      <input type="text" id="resFilter" placeholder="filter by name, type, move or build">
+      <span class="small">Click a Pokémon to simulate a battle below.</span>
+    </div>
+    <div class="scroll" style="max-height:520px"><table id="resTable"><thead><tr>
+      <th class="s" data-k="rank">Rank</th><th>Tier</th><th class="s" data-k="name">Pokémon</th><th>Moves</th><th>Ability</th><th>Nature</th><th>EVs</th><th>Type</th>
+      <th class="s n" data-k="elo">ELO</th><th class="n">W–L–D</th><th class="s n" data-k="win_pct">Win %</th><th class="s n" data-k="top10_win_pct">Top 10 %</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="card" id="viewCard">
+    <h2>Watch a battle</h2>
+    <p class="small">Uses the movesets in <code>out/genN/movesets.json</code> and the same engine and brain as the tournament. Change the seed to see different rolls.</p>
+    <div class="toolbar">
+      <select id="vA" style="width:auto"></select><span>vs</span><select id="vB" style="width:auto"></select>
+      <input type="number" id="vSeed" value="1" style="width:100px">
+      <button class="btn ghost" id="vRand">Random seed</button>
+      <button class="btn" id="vRun">Run battle</button>
+    </div>
+    <div id="vOut"></div>
+  </section>
+</main>
+</div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const PRESETS = {
+  quick:    {passes:1, sample:8,  screen_games:2, confirm_games:6,  games:5,  note:"Smoke test. Rough sets, small tournament. A few minutes on most machines."},
+  standard: {passes:3, sample:32, screen_games:3, confirm_games:16, games:15, note:"The settings from the README: 3 passes at a 1.5% accept margin, 15 games per pairing."},
+  thorough: {passes:5, sample:48, screen_games:4, confirm_games:20, games:25, note:"Up to 5 passes against a bigger opponent sample. Much longer."}
+};
+let preset = "standard", cpus = 1;
+function setPreset(p){
+  preset = p;
+  document.querySelectorAll("#presets button").forEach(b => b.classList.toggle("on", b.dataset.p === p));
+  const c = PRESETS[p];
+  for (const k of ["passes","sample","screen_games","confirm_games","games"]) $(k).value = c[k];$("presetNote").textContent = c.note;
+}
+document.querySelectorAll("#presets button").forEach(b => b.onclick = () => setPreset(b.dataset.p));
+setPreset("standard");
+
+let GEN = 1, GENS = [];
+const S = {gen:0, since:0, names:{}, seed:{}, cur:{}, changes:{}, feed:[], passes:[], pass:null, passStart:0, mon:null, stage:null,
+           stages:{}, cards:[], sortK:"rank", sortDir:1, running:false, done:false, battle:null, order:[]};
+
+const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt = m => m === "PSYCHIC_M" ? "Psychic" : escapeHTML(String(m).toLowerCase().split("_").filter(Boolean).map(w => w[0].toUpperCase() + w.slice(1)).join(" "));
+const fmtT = t => t === "PSYCHIC_TYPE" ? "Psychic" : escapeHTML(t[0] + t.slice(1).toLowerCase());
+const sec = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s/3600), m = Math.floor(s%3600/60); return h ? `${h}h ${m}m` : m ? `${m}m ${s%60}s` : `${s}s`; };
+const nf = n => n.toLocaleString();
+
+function getChipsArray(obj) {
+    if (Array.isArray(obj)) return obj;
+    if (!obj) return [];
+    const evs = obj.evs ? "EVS_" + Object.entries(obj.evs).filter(([,v]) => v).map(([k,v]) => k + ":" + v).join("_") : "";
+    return [...(obj.moves || []), obj.ability, obj.nature, evs].filter(Boolean);
+}
+
+const mvChips = (ms, o) => getChipsArray(ms).map(m => `<span class="mv ${o && o.add && o.add.has(m) ? "add" : ""}">${fmt(m)}</span>`).join("");
+
+function diff(oldM, newM){
+  const o = getChipsArray(oldM), n = getChipsArray(newM);
+  const rem = o.filter(m => !n.includes(m)), add = n.filter(m => !o.includes(m));
+  return {rem, add};
+}
+
+function apply(e){
+  S.revision = (S.revision || 0) + 1;
+  switch(e.type){
+    case "run_start":
+      Object.assign(S, {feed:[], passes:[], pass:null, mon:null, stages:{}, cards:[], changes:{}, battle:null, done:false, stage:null, cfg:e});
+      break;
+    case "stage": S.stage = e.name; S.stages[e.name] = "active";
+      for (const k of ["seed","converge","tournament","results"]) if (k !== e.name && S.stages[k] === "active") S.stages[k] = "done";
+      break;
+    case "seed": S.names = e.names; S.seed = JSON.parse(JSON.stringify(e.movesets)); S.cur = e.movesets; S.order = Object.keys(e.movesets); S.stages.seed = "done"; break;
+    case "pass_start": S.pass = {no:e.pass_no, of:e.passes, changed:0, n:0, total:0, base:S.elapsedSearch || 0}; S.mon = null; break;
+    case "field": S.pass && (S.pass.top10 = e.top10); break;
+    case "mon_start": S.mon = {...e, phase:"screening"}; if (S.pass) { S.pass.total = e.of; S.pass.n = e.n - 1; } break;
+    case "screen": if (S.mon) { S.mon.screen = e; S.mon.phase = "confirming"; } break;
+    case "mon_result":
+      S.cur[e.key] = e.new;
+      if (e.accepted) S.changes[e.key] = (S.changes[e.key] || 0) + 1;
+      if (S.pass) { S.pass.n = e.n; S.pass.total = e.of; S.pass.changed = e.changed_so_far; }
+      S.mon = {...(S.mon || {}), ...e, phase:"decided"};
+      S.battlesTotal = e.battles; S.elapsedSearch = e.elapsed;
+      S.feed.push(e); if (S.feed.length > 600) S.feed.shift();
+      break;
+    case "pass_done": S.passes.push({no:e.pass_no, changed:e.changed, of:e.of}); if (S.pass) S.pass.done = true; break;
+    case "converged": S.converged = e.converged; break;
+    case "time_budget": S.timeBudget = true; break;
+    case "battle_progress": S.battle = e; break;
+    case "results": S.cards = e.cards; S.meta = e.meta; S.types = e.type_stats || []; S.stages.results = "done"; break;
+    case "done": S.done = true; for (const k in S.stages) S.stages[k] = "done"; break;
+    case "stopped": S.stopped = true; break;
+  }
+}
+
+/* ---------- render ---------- */
+let queued = false;
+function typeStatsFrom(cards, topN = 20) {
+  const top = {}, wins = {};
+  for (const c of cards) for (const t0 of c.types) {
+    const t = t0.replace("_TYPE", "");
+    (wins[t] = wins[t] || []).push(c.win_pct);
+    if (c.rank <= topN) top[t] = (top[t] || 0) + 1;
+  }
+  return Object.keys(wins).map(t => ({type: t, pokemon: wins[t].length, top_n: top[t] || 0,
+    avg_win_pct: Math.round(wins[t].reduce((a, b) => a + b, 0) / wins[t].length * 10) / 10}))
+    .sort((a, b) => b.top_n - a.top_n || b.avg_win_pct - a.avg_win_pct);
+}
+function render(){ if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; draw(); }); } }
+
+function draw(){
+  const st = $("status");
+  st.className = "pill" + (S.running ? " run" : S.error ? " err" : "");
+  st.textContent = S.running ? "running" : S.error ? "failed" : S.stopped ? "stopped" : S.done ? "finished" : "idle";
+  $("start").disabled = S.running || !!S.busyGen; $("stop").classList.toggle("hidden", !S.running);
+  document.querySelectorAll(".step").forEach(el => {
+    const s = S.stages[el.dataset.s];
+    el.classList.toggle("active", s === "active"); el.classList.toggle("done", s === "done");
+  });
+  const er = $("err"); er.classList.toggle("hidden", !S.error); er.textContent = S.error || "";
+
+  // convergence
+  const conv = S.order.length > 0 && !(S.cfg && S.cfg.skip_search);
+  $("convBody").classList.toggle("hidden", !conv); $("convIdle").classList.toggle("hidden", conv);
+  if (conv) {
+    const p = S.pass;
+    $("mPass").textContent = p ? `${p.no} / ${p.of}` : "–";
+    $("mMon").textContent = p && p.total ? `${p.n} / ${p.total}` : "–";
+    $("mChanged").textContent = p ? p.changed : "–";
+    $("mBattles").textContent = S.battlesTotal ? nf(S.battlesTotal) : "–";
+    let eta = "–";
+    if (p && p.n > 2 && S.elapsedSearch && !p.done) {
+      eta = sec((S.elapsedSearch - p.base) / p.n * (p.total - p.n));
+    }
+    $("mEta").textContent = (p && p.done) || S.timeBudget || S.stages.tournament || S.stages.results ? "done" : eta;
+    $("convBar").style.width = p && p.total ? (100 * p.n / p.total) + "%" : "0";
+    let v = "";
+    if (S.converged === true) v = "Stable across two independent search passes; global optimality is not guaranteed.";
+    else if (S.converged === false && S.stages.tournament) v = S.timeBudget ? "Stopped at the time limit; continuing with the current sets." : "Pass limit reached before the sets fully settled; continuing with the current sets.";
+    $("verdict").textContent = v;
+    drawNow(); drawChart(); drawFeed(); drawSets();
+  }
+  // battles
+  const b = S.battle;
+  $("batBody").classList.toggle("hidden", !b); $("batIdle").classList.toggle("hidden", !!b);
+  if (b) {
+    $("bDone").textContent = nf(b.battles_done); $("bTotal").textContent = nf(b.battles);
+    const rate = b.elapsed ? b.battles_done / b.elapsed : 0;
+    $("bRate").textContent = rate ? nf(Math.round(rate)) : "–";
+    $("bEta").textContent = b.rows_done >= b.rows ? "done" : (rate ? sec((b.battles - b.battles_done) / rate) : "–");
+    $("batBar").style.width = (100 * b.battles_done / b.battles) + "%";
+  }
+  drawResults();
+}
+
+function drawNow(){
+  const m = S.mon;
+  if (!m) { $("nowName").textContent = "Waiting for the first Pokémon…"; $("nowMoves").innerHTML = ""; $("nowInfo").textContent = ""; $("nowDetail").innerHTML = ""; return; }
+  $("nowName").textContent = m.name;
+  let html = "", info = "", det = "";
+  const cur = m.phase === "decided" ? m.old : m.moves;
+  if (m.phase === "decided" && m.accepted) {
+    const d = diff(m.old, m.new);
+    html = mvChips(m.old, null) + d.rem.map(x => `<span class="mv rem">${fmt(x)}</span>`).join("") + d.add.map(x => `<span class="mv add">${fmt(x)}</span>`).join("");
+    info = `Accepted: ${m.base_wins} → ${m.best_wins} wins out of ${m.total} confirm battles (needed +${m.needed}).`;
+  } else if (m.phase === "decided") {
+    html = mvChips(cur);
+    info = m.best_tried ? `Kept. Best candidate scored ${m.best_wins} vs ${m.base_wins} for the current set out of ${m.total}; needed +${m.needed}.` : `Kept. No candidate beat the current set (${m.base_wins}/${m.total}).`;
+  } else {
+    html = mvChips(cur);
+    info = `Screening ${nf(m.candidates)} one-move swaps against ${m.opponents} opponents…`;
+  }
+  if (m.screen) det += `<h3 style="margin-top:10px">Best screened swaps</h3><table><tbody>` + m.screen.top.map(t => `<tr><td>${diffChips(m.moves, t.moves)}</td><td class="n">${t.wins}/${m.screen.total}</td></tr>`).join("") + `</tbody></table><p class="small">Current set screened at ${m.screen.base_wins}/${m.screen.total}.</p>`;
+  if (m.confirm) det += `<h3 style="margin-top:10px">Confirmed on fresh seeds</h3><table><tbody><tr><td>current set</td><td class="n">${m.base_wins}/${m.total}</td></tr>` + m.confirm.map(t => `<tr><td>${diffChips(m.old, t.moves)}</td><td class="n">${t.wins}/${m.total}</td></tr>`).join("") + `</tbody></table>`;
+  $("nowMoves").innerHTML = html; $("nowInfo").textContent = info; $("nowDetail").innerHTML = det;
+}
+function diffChips(o, n){ const d = diff(o, n); return d.rem.map(x => `<span class="mv rem">${fmt(x)}</span>`).join("") + d.add.map(x => `<span class="mv add">${fmt(x)}</span>`).join(""); }
+
+function drawChart(){
+  const data = S.passes.map(p => p.changed);
+  if (S.pass && !S.pass.done) data.push(S.pass.changed);
+  const W = 600, H = 120, max = Math.max(10, ...data), n = Math.max(data.length, 2);
+  const bw = W / n;
+  let s = "";
+  data.forEach((v, i) => {
+    const h = (H - 26) * v / max, x = i * bw + bw * .2, live = (i === S.passes.length && S.pass && !S.pass.done);
+    s += `<rect x="${x}" y="${H - 16 - h}" width="${bw * .6}" height="${h}" fill="var(--bar)" opacity="${live ? .5 : 1}"/>`;
+    s += `<text x="${x + bw * .3}" y="${H - 18 - h}" text-anchor="middle" font-size="11" fill="var(--ink)">${v}</text>`;
+    s += `<text x="${x + bw * .3}" y="${H - 3}" text-anchor="middle" font-size="11" fill="var(--mute)">pass ${i + 1}</text>`;
+  });
+  $("chart").innerHTML = s;
+}
+
+let lastFeed = -1, lastFeedFlag = null;
+function drawFeed(){
+  const only = $("onlyChg").checked;
+  const key = S.revision + "|" + only;
+  if (key === lastFeedFlag) return;
+  lastFeedFlag = key;
+  const f = $("feed"), atEnd = f.scrollTop + f.clientHeight >= f.scrollHeight - 30;
+  f.innerHTML = S.feed.filter(e => !only || e.accepted).map(e => {
+    if (e.accepted) { const d = diff(e.old, e.new);
+      return `<div class="c"><span class="tag y">changed</span><b>${escapeHTML(e.name)}</b> (p${e.pass_no}, ${e.n}/${e.of}) ${d.rem.map(fmt).join(", ")} → ${d.add.map(fmt).join(", ")} <span class="small">${e.base_wins}→${e.best_wins}/${e.total}</span></div>`; }
+    return `<div><span class="tag">kept</span><b>${escapeHTML(e.name)}</b> (p${e.pass_no}, ${e.n}/${e.of}) <span class="small">${e.base_wins}${e.best_tried ? " vs best " + e.best_wins : ""}/${e.total}</span></div>`;
+  }).join("");
+  if (atEnd) f.scrollTop = f.scrollHeight;
+}
+
+let lastSetsKey = "";
+function drawSets(){
+  const q = $("setFilter").value.toLowerCase(), co = $("setChgOnly").checked;
+  const key = JSON.stringify([q, co, S.revision, S.order.length]);
+  if (key === lastSetsKey) return; lastSetsKey = key;
+  const rows = [];
+  for (const k of S.order) {
+    const a = S.seed[k], c = S.cur[k], ch = S.changes[k] || 0;
+    const same = JSON.stringify(a) === JSON.stringify(c);
+    if (co && same) continue;
+    const text = (S.names[k] + " " + getChipsArray(c).concat(getChipsArray(a)).join(" ")).toLowerCase().replace(/_/g, " ");
+    if (q && !text.includes(q)) continue;
+    const d = diff(a, c);
+    rows.push(`<tr class="${same ? "" : "chg"}"><td>${escapeHTML(S.names[k])}</td><td>${mvChips(a)}</td><td>${mvChips(c, {add:new Set(d.add)})}</td><td class="n">${ch || ""}</td></tr>`);
+  }
+  document.querySelector("#setTable tbody").innerHTML = rows.join("");
+}
+
+let lastResKey = "";
+function drawResults(){
+  const q = $("resFilter").value.toLowerCase();
+  const key = JSON.stringify([q, S.sortK, S.sortDir, S.revision, S.cards.length, S.meta && S.meta.seed]);
+  if (key === lastResKey) return; lastResKey = key;
+  if (!S.cards.length) { document.querySelector("#resTable tbody").innerHTML = ""; $("resMeta").textContent = "No results yet."; $("typeStats").innerHTML = ""; return; }
+  const m = S.meta;
+  $("resMeta").textContent = `Gen ${m.generation || 1} · ${S.cards.length} Pokémon · ${m.games_per_pair} games per pairing · tournament seed ${m.seed} · battles took ${m.seconds}s · engine v${m.engine_version || "?"} · brain v${m.brain_version}`;
+  const ts = (S.types && S.types.length) ? S.types : typeStatsFrom(S.cards);
+  $("typeStats").innerHTML = ts.length ? `<h3>Types in the top 20, and average win % by type</h3><div class="scroll" style="max-height:230px"><table><thead><tr><th>Type</th><th>In top 20</th><th>Avg win %</th><th>Pokémon</th></tr></thead><tbody>` + ts.map(r => `<tr><td>${escapeHTML(r.type)}</td><td>${r.top_n}</td><td>${r.avg_win_pct}</td><td>${r.pokemon}</td></tr>`).join("") + `</tbody></table></div>` : "";
+  const cs = S.cards.slice().sort((a, b) => {
+    const x = a[S.sortK], y = b[S.sortK];
+    return (typeof x === "string" ? x.localeCompare(y) : x - y) * S.sortDir * (["elo","win_pct","top10_win_pct"].includes(S.sortK) ? -1 : 1);
+  });
+  document.querySelector("#resTable tbody").innerHTML = cs.filter(c => !q || (c.name + " " + c.types.join(" ") + " " + getChipsArray(c.moves).join(" ")).toLowerCase().replace(/_/g, " ").includes(q)).map(c => {
+    const build = Array.isArray(c.moves) ? {moves:c.moves} : c.moves;
+    const stats = {hp:"HP", atk:"Atk", defn:"Def", spa:"SpA", sdf:"SpD", spe:"Spe"};
+    const evs = build.evs ? Object.entries(stats).filter(([stat]) => Number(build.evs[stat]) > 0)
+      .map(([stat,label]) => `${escapeHTML(build.evs[stat])} ${label}`).join(" / ") || "0" : "—";
+    return `<tr data-k="${escapeHTML(c.key)}" style="cursor:pointer"><td>${c.rank}</td><td><span class="tier ${escapeHTML(c.tier)}">${escapeHTML(c.tier)}</span></td><td><b>${escapeHTML(c.name)}</b>${c.required_item ? `<div class="small">${fmt(c.required_item)} (fixed)</div>` : ""}</td><td>${(build.moves || []).map(fmt).join(", ")}</td><td>${build.ability ? fmt(build.ability) : "—"}</td><td>${build.nature ? fmt(build.nature) : "—"}</td><td>${evs}</td><td>${c.types.map(fmtT).join("/")}</td><td class="n">${c.elo}</td><td class="n">${c.wins}–${c.losses}–${c.draws}</td><td class="n">${c.win_pct.toFixed(1)}</td><td class="n">${c.top10_win_pct.toFixed(1)}</td></tr>`;
+  }).join("");
+}
+document.querySelectorAll("#resTable th.s").forEach(th => th.onclick = () => { const k = th.dataset.k; S.sortDir = S.sortK === k ? -S.sortDir : 1; S.sortK = k; render(); });
+$("resFilter").oninput = render; $("setFilter").oninput = render; $("setChgOnly").onchange = render;
+$("onlyChg").onchange = () => { lastFeedFlag = null; render(); };
+$("resTable").onclick = ev => { const tr = ev.target.closest("tr[data-k]"); if (!tr) return; $("vA").value = tr.dataset.k;
+  if ($("vB").value === tr.dataset.k) $("vB").value = (S.cards.find(c => c.key !== tr.dataset.k) || {key: tr.dataset.k}).key;
+  $("viewCard").scrollIntoView({behavior:"smooth"}); runBattle(); };
+
+/* ---------- control ---------- */
+$("start").onclick = async () => {
+  for (const input of document.querySelectorAll("input[type=number]:not(#vSeed)")) { if (!input.reportValidity()) return; }
+  const cfg = {gen: GEN, preset, fresh: $("fresh").checked, skip_search: $("skip_search").checked};
+  for (const k of ["passes","sample","screen_games","confirm_games","games","margin","minutes","procs","seed"]) cfg[k] = $(k).value;
+  S.since = 0; S.error = ""; S.stopped = false; S.pass = null; S.mon = null; S.battle = null; S.cards = []; S.meta = null; S.feed = []; S.passes = []; S.order = []; S.converged = undefined; S.timeBudget = false; S.stages = {};
+  lastFeedFlag = null; lastSetsKey = ""; lastResKey = "";
+  S.gen = (S.gen || 0) + 1;
+  const epoch = S.gen;
+  $("start").disabled = true;
+  try {
+  const r = await fetch("/api/start", {method:"POST", body:JSON.stringify(cfg)});
+  const j = await r.json(); if (epoch !== S.gen) return; if (!j.ok) alert(j.message);
+  S.since = 0; S.gen++; S.elapsedSearch = 0; S.battlesTotal = 0; S.running = j.ok; render();
+  } catch (err) { if (epoch !== S.gen) return; S.running=false; S.error=String(err); $("start").disabled=false; render(); }
+};
+$("stop").onclick = async () => { await fetch("/api/stop", {method:"POST", body:"{}"}); };
+
+async function poll(){
+  try {
+    const gen = S.gen;
+    const r = await fetch("/api/events?since=" + S.since + "&gen=" + GEN + "&run_id=" + encodeURIComponent(S.runId || "")); const j = await r.json();
+    if (gen !== S.gen) return setTimeout(poll, 300);
+    if (j.run_id !== S.runId) { resetState(); S.runId = j.run_id; }
+    for (const e of j.events) apply(e);
+    S.busyGen = j.busy_gen;
+    S.since = j.next; S.running = j.running;
+    S.error = S.loadError || ((!j.running && j.returncode && !S.stopped) ? ("The run stopped with an error:\n" + j.error) : "");
+    render();
+  } catch (e) { /* server restarting */ }
+  setTimeout(poll, 700);
+}
+
+/* ---------- battle viewer ---------- */
+let battleRequest = 0;
+async function runBattle(){
+  const epoch=S.gen, request=++battleRequest;
+  const a = $("vA").value, b = $("vB").value, seed = $("vSeed").value || 1;
+  $("vOut").innerHTML = '<p class="small">Running…</p>';
+  const r = await fetch(`/api/battle?a=${a}&b=${b}&seed=${seed}&gen=${GEN}`); const j = await r.json();
+  if (epoch!==S.gen || request!==battleRequest) return;
+  if (j.error) { $("vOut").innerHTML = `<div class="err">${escapeHTML(j.error)}</div>`; return; }
+  const mirror = j.a.name === j.b.name;
+  const bar = (hp, mx) => { const p = Math.max(0, 100 * hp / mx); return `<div class="hp"><div class="bar"><i class="${p < 25 ? "low" : ""}" style="width:${p}%"></i></div><small>${Math.max(0, hp)}/${mx}</small></div>`; };
+  const side = x => `<div><b>${escapeHTML(x.name)}</b> <span class="small">Lv ${x.level}, ${x.hp} HP</span><div>${mvChips(x.moves)}${x.required_item ? `<span class="mv">${fmt(x.required_item)} (fixed)</span>` : ""}</div></div>`;
+  let rows = j.turns.map(t => {
+    const aActs = t.side ? t.side === "a" : !mirror && t.actor === j.a.name;
+    const [ah, am, bh, bm] = aActs ? [t.hp, t.maxhp, t.opp_hp, t.opp_maxhp] : [t.opp_hp, t.opp_maxhp, t.hp, t.maxhp];
+    return `<tr><td>${t.turn}</td><td class="${aActs ? "me" : ""}">${escapeHTML(t.actor)} used ${fmt(t.move)}</td><td>${bar(ah, am)}</td><td>${bar(bh, bm)}</td></tr>`;
+  }).join("");
+  const res = j.winner ? `<b class="win">${escapeHTML(j.winner)} wins</b>` : "<b>Draw</b>";
+  $("vOut").innerHTML = `<div class="row2" style="margin-bottom:10px">${side(j.a)}${side(j.b)}</div>
+    <p>${res} <span class="small">(seed ${j.seed}, ${j.turns.length} moves). HP bars show each side just before the move.</span></p>
+    <div class="scroll"><table><thead><tr><th>Turn</th><th>Move</th><th>${escapeHTML(j.a.name)}</th><th>${escapeHTML(j.b.name)}</th></tr></thead><tbody>${rows}
+    <tr><td></td><td><b>End</b></td><td>${bar(j.final.a_hp, j.a.hp)}</td><td>${bar(j.final.b_hp, j.b.hp)}</td></tr></tbody></table></div>`;
+}
+$("vRun").onclick = runBattle;
+$("vRand").onclick = () => { $("vSeed").value = Math.floor(Math.random() * 1e6); runBattle(); };
+
+async function loadGens(){
+  const j = await (await fetch("/api/gens")).json(); GENS = j.gens;
+  let saved = 1; try { saved = Number(localStorage.getItem("gen")) || 1; } catch (e) {}
+  GEN = GENS.some(g => g.id === saved) ? saved : GENS[0].id;
+  $("genSel").innerHTML = GENS.map(g => `<option value="${g.id}">${escapeHTML(g.name)}</option>`).join("");
+  $("genSel").value = GEN;
+}
+function applyGen(){
+  const g = GENS.find(x => x.id === GEN);
+  $("title").textContent = `${g ? g.name : "Gen " + GEN} simulator — running on this computer`;
+  document.querySelectorAll('a[href^="/download/"]').forEach(a => {
+    if (!a.dataset.base) a.dataset.base = a.getAttribute("href");
+    a.href = a.dataset.base + "?gen=" + GEN; });
+}
+function resetState(){
+  Object.assign(S, {since:0, error:"", loadError:"", stopped:false, pass:null, mon:null, battle:null, cards:[], meta:null, types:[],
+    feed:[], passes:[], order:[], converged:undefined, stage:null, stages:{}, names:{}, seed:{}, cur:{}, changes:{},
+    running:false, done:false, timeBudget:false, elapsedSearch:0, battlesTotal:0, cfg:null, busyGen:null, runId:null});
+  S.gen++; lastFeedFlag = null; lastSetsKey = ""; lastResKey = "";
+}
+async function init(){
+  const epoch=S.gen, generation=GEN;
+  let j;
+  try {
+    const response = await fetch("/api/pokemon?gen=" + generation);
+    j = await response.json();
+    if (response.ok===false || j.error) throw new Error(j.error || "Could not load Pokémon data");
+  } catch (error) {
+    if (epoch!==S.gen) return;
+    S.loadError=String(error); S.error=S.loadError; render(); return;
+  }
+  if (epoch!==S.gen) return;
+  S.loadError="";
+  cpus = j.cpus; $("procs").value = cpus;
+  const opts = j.mons.map(m => `<option value="${escapeHTML(m.key)}">${escapeHTML(m.name)}</option>`).join("");
+  const keys = j.mons.map(m => m.key);
+  $("vA").innerHTML = opts; $("vB").innerHTML = opts;
+  $("vA").value = keys.includes("mewtwo") ? "mewtwo" : keys[0]; $("vB").value = keys.includes("snorlax") ? "snorlax" : keys[1];
+  // restore an earlier run, or fall back to the last saved results
+  const ev = await (await fetch("/api/events?since=0&gen=" + GEN)).json();
+  if (epoch!==S.gen) return;
+  S.runId=ev.run_id; S.since=ev.next; S.running=ev.running; S.busyGen=ev.busy_gen;
+  for (const event of ev.events) apply(event);
+  if (!ev.events.length) {
+    const lr = await (await fetch("/api/last_results?gen=" + GEN)).json();
+    if (epoch!==S.gen) return;
+    if (lr.cards && lr.cards.length) { S.cards = lr.cards; S.meta = lr.meta; S.types = lr.type_stats || []; }
+  }
+  render();
+}
+$("genSel").onchange = async () => {
+  GEN = Number($("genSel").value); try { localStorage.setItem("gen", GEN); } catch (e) {}
+  resetState(); applyGen(); await init();
+};
+(async function boot(){ await loadGens(); applyGen(); await init(); poll(); })();
+</script>
+</body>
+</html>
