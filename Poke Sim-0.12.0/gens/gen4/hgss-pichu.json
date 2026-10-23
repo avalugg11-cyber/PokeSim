@@ -1,0 +1,78 @@
+{
+  "revision": "6988158691eb6178cff697cda0428045ddcba5fb",
+  "source": "pret/pokeheartgold",
+  "personal": {
+    "species": "PICHU",
+    "hp": 20,
+    "atk": 40,
+    "def": 15,
+    "speed": 60,
+    "spatk": 35,
+    "spdef": 35,
+    "types": [
+      "TYPE_ELECTRIC",
+      "TYPE_ELECTRIC"
+    ],
+    "catchRate": 190,
+    "expYield": 42,
+    "hp_yield": 0,
+    "atk_yield": 0,
+    "def_yield": 0,
+    "speed_yield": 1,
+    "spatk_yield": 0,
+    "spdef_yield": 0,
+    "items": [
+      "ITEM_NONE",
+      "ITEM_ORAN_BERRY"
+    ],
+    "genderRatio": 0.5,
+    "eggCycles": 10,
+    "friendship": 70,
+    "growthRate": "MEDIUM_FAST",
+    "eggGroups": [
+      "EGG_GROUP_UNDISCOVERED",
+      "EGG_GROUP_UNDISCOVERED"
+    ],
+    "abilities": [
+      "ABILITY_STATIC",
+      "ABILITY_NONE"
+    ],
+    "greatMarshRate": 0,
+    "color": 2,
+    "flip": 1,
+    "tms": [
+      6,
+      10,
+      16,
+      17,
+      18,
+      21,
+      23,
+      24,
+      25,
+      27,
+      32,
+      34,
+      42,
+      43,
+      44,
+      45,
+      56,
+      57,
+      58,
+      70,
+      73,
+      78,
+      82,
+      83,
+      86,
+      87,
+      90
+    ],
+    "hms": []
+  },
+  "source_excerpts": [
+    "ct == HOLD_EFFECT_NO_EVOLVE && context != EVOCTX_ITEM_USE) {\n        return SPECIES_NONE;\n    }\n    // Spiky-ear Pichu cannot evolve\n    if (species == SPECIES_PICHU && GetMonData(mon, MON_DATA_FORM, 0) == 1) {\n        return SPECIES_NONE;\n    }\n    if (method_ret == NULL) {\n        method_ret = &method_local;\n    }\n    evoTable = Heap_Alloc(HEAP_ID_DEFAULT, MAX_EVOS_PER_POKE * sizeof(struct Evolution));\n    LoadMonEvolutionTable(species, evoTable);\n    switch (context) {\n    case EVOCTX_LEVELUP:\n        level = (u8)GetMonData(mon, MON_DATA_LEVEL, NULL);\n        friendship = (u16)GetMonData(mo",
+    " form * 2);\n        pokepicTemplate->palDataID = (u16)(shiny + 0xF8 + form * 2);\n        break;\n    case SPECIES_PICHU: // spiky-ear\n        pokepicTemplate->narcID = NARC_poketool_pokegra_otherpoke;\n        pokepicTemplate->charDataID = (u16)(whichFacing / 2 + 0x9A + form * 2);\n        pokepicTemplate->palDataID = (u16)(shiny + 0xFC + form * 2);\n        break;\n    default:\n        pokepicTemplate->narcID = NARC_poketool_pokegra_pokegra;\n        pokepicTemplate->charDataID = (u16)(species * 6 + whichFacing + (gender == MON_FEMALE ? 0 : 1));\n        pokepicTemplate->palDataID = (u16)(shiny + (s"
+  ]
+}
